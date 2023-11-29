@@ -7,9 +7,16 @@ class WelcomePageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      body: Column(children: [Center(child: Image.asset(AppImages.logo))]),
-    ));
+      child: Scaffold(
+        body: Column(
+          children: [
+            Center(
+              child: Image.asset(AppImages.logo),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
