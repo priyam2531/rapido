@@ -9,6 +9,8 @@ class AppMargin{
   static double marginSize14 = 14.0;
   static double marginSize15 = 15.0;
   static double marginSize16 = 16.0;
+  static double marginSize25 = 25.0;
   static double marginSize30 = 30.0;
   static double marginSize60 = 60.0;
+  static double marginSize90 = 90.0;
 }
