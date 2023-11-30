@@ -4,4 +4,5 @@ class AppImages{
   static const String delivary = "assets/dilivary.png";
   static const String profile = "assets/profile.png";
   static const String userpic= "assets/user_photo.png";
+  static const String map= "assets/map.png";
 }
