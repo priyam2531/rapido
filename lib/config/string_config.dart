@@ -16,6 +16,7 @@ class StringConfig{
   static String introducing="Introducing";
   static String repidopowerpass="Rapido Power Pass";
   static String schedulearide="Schedule a Ride";
+  static String chooseaproced="Choose a Language to proceed:";
   static String rideinadvance="Avoid delays in commute by scheduling a ride in advance.";
   static String faltrates="Pass for daily commuters to make their commute easy with flat rates";
   static String intro ="Same day delivery of your packages by our Captains to provide you with a seamless delivery experience.";

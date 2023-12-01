@@ -12,5 +12,8 @@ class AppFont{
   static double fontSize35 = 35.0;
   static double fontSize40 = 40.0;
   static double fontSize50 = 50.0;
+  static double fontSize70 = 70.0;
+  static double fontSize90 = 90.0;
+  static double fontSize150 = 150.0;
 
 }
