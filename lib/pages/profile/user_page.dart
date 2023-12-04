@@ -45,12 +45,44 @@ class _UserPageState extends State<UserPage> {
                           child: Center(child: AppIcon.setting))
                     ],
                   ),
-                  Container(
-                      width: 50,
-                      height: 50,
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: AppColor.white),
-                      child: Image.asset(AppImages.profile)),
+                  SizedBox(
+                    width: 100,
+                    height: 60,
+                    child:
+                        Stack(alignment: Alignment.topRight, children: <Widget>[
+                      Container(
+                          width: 100,
+                          height: 120,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: AppColor.white),
+                          child: Image.asset(AppImages.profile)),
+                      Positioned(
+                          right: 5,
+                          child: Container(
+                            width: 28,
+                            height: 28,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: AppColor.lightblue.withOpacity(.5)),
+                          )),
+                      Positioned(
+                          right: -5,
+                          bottom: 40,
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 7),
+                            width: 30,
+                            height: 30,
+                            child: const Icon(Icons.edit_outlined,
+                                color: AppColor.white),
+                          )),
+                    ]),
+                  ),
+                  // Container(
+                  //     width: 50,
+                  //     height: 50,
+                  //     decoration: const BoxDecoration(
+                  //         shape: BoxShape.circle, color: AppColor.white),
+                  //     child: Image.asset(AppImages.profile)),
                   Text(
                     StringConfig.name,
                     style: TextStyle(
@@ -74,11 +106,9 @@ class _UserPageState extends State<UserPage> {
                   )
                 ],
               )),
-
           const SizedBox(
             height: 20,
           ),
-
           ListTile(
             title: Text(
               StringConfig.history,
