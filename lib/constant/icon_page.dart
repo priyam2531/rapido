@@ -11,5 +11,8 @@ class AppIcon {
   static Icon transform = Icon(Icons.transform, color: AppColor.white,);
   static Icon laguage = Icon(Icons.language, color: AppColor.white,);
   static Icon notification = Icon(Icons.toggle_off, color: AppColor.grey,);
+  static Icon home = Icon(Icons.home, color: AppColor.white,);
+  static Icon gym = Icon(CupertinoIcons.plus, color: AppColor.black,);
+  static Icon chair = Icon(Icons.chair_alt_outlined, color: AppColor.white,);
 
 }
