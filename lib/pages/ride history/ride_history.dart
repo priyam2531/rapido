@@ -46,27 +46,9 @@ class _RideHistoryState extends State<RideHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: AppColor.white,clipBehavior: Clip.antiAlias,shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(10),bottomLeft: Radius.circular(10))),leading: AppIcon.backarrow,title: Center(child: Text(StringConfig.ridehistory,style: TextStyle(color: AppColor.black2),))),
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Row(
-        children: [
-          Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: AppColor.white),
-              child: Center(child: Center(child: AppIcon.backarrow))),
-          SizedBox(
-            width: 160,
-          ),
-          Text(
-            StringConfig.ridehistory,
-            style: TextStyle(
-                fontSize: AppFont.fontSize15,
-                color: AppColor.black,
-                fontWeight: FontWeight.bold),
-          )
-        ],
-      ),
+
       Expanded(
         child: GridView.builder(
           gridDelegate:

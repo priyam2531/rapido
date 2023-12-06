@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:rapido/constant/app_images.dart';
 
-class signpageteo extends StatefulWidget {
-  const signpageteo({super.key});
+class signpagetwo extends StatefulWidget {
+  const signpagetwo({super.key});
 
   @override
-  State<signpageteo> createState() => _signpageteoState();
+  State<signpagetwo> createState() => _signpagetwoState();
 }
 
-class _signpageteoState extends State<signpageteo> {
+class _signpagetwoState extends State<signpagetwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: Column(children: [Image.asset(AppImages.logo)],));
