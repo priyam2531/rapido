@@ -5,6 +5,9 @@ class AppImages{
   static const String profile = "assets/profile.png";
   static const String userpic= "assets/user_photo.png";
   static const String map= "assets/map.png";
+  static const String home= "assets/home.png";
+  static const String chair= "assets/chair.png";
+  static const String plus= "assets/plus.png";
   static const String gym= "assets/gym_demo.png";
   static const String prbox= "assets/Group_31-removebg-preview.png";
   static const String ride= "assets/taxi.png";

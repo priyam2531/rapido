@@ -5,6 +5,7 @@ import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
 import 'package:rapido/constant/icon_page.dart';
 import 'package:rapido/constant/margin_page.dart';
+import 'package:rapido/pages/ride%20history/ride_history.dart';
 
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
@@ -114,7 +115,9 @@ class _UserPageState extends State<UserPage> {
               StringConfig.history,
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return RideHistory();
+              },));
             },
           ),
           const SizedBox(

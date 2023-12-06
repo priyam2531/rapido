@@ -77,12 +77,15 @@ class _FavDestinationState extends State<FavDestination> {
                         color: AppColor.yellow, shape: BoxShape.circle),
                     child: Column(
                       children: [
-                        AppIcon.home,
+                        Image.asset(
+                          AppImages.home,
+                          height: 20,
+                        ),
                         Text(
                           StringConfig.home,
                           style: TextStyle(
                               color: AppColor.black,
-                              fontSize: AppFont.fontSize8),
+                              fontSize: AppFont.fontSize10),
                         )
                       ],
                     ),
@@ -122,12 +125,15 @@ class _FavDestinationState extends State<FavDestination> {
                         color: AppColor.yellow, shape: BoxShape.circle),
                     child: Column(
                       children: [
-                        AppIcon.chair,
+                        Image.asset(
+                          AppImages.chair,
+                          height: 20,
+                        ),
                         Text(
                           StringConfig.chair,
                           style: TextStyle(
                               color: AppColor.black,
-                              fontSize: AppFont.fontSize8),
+                              fontSize: AppFont.fontSize10),
                         )
                       ],
                     ),
@@ -143,7 +149,7 @@ class _FavDestinationState extends State<FavDestination> {
                           borderRadius: BorderRadius.circular(10),
                           color: AppColor.white),
                       child: Center(
-                        child: Text(StringConfig.Officeplace,
+                        child: Text(StringConfig.officeplace,
                             style: TextStyle(
                                 color: AppColor.black,
                                 fontSize: AppFont.fontSize14)),
@@ -170,13 +176,15 @@ class _FavDestinationState extends State<FavDestination> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Image.asset("assets/gym_demo.png",height: 15,
+                        Image.asset(
+                          AppImages.gym,
+                          height: 20,
                         ),
                         Text(
                           StringConfig.gym,
                           style: TextStyle(
                               color: AppColor.black,
-                              fontSize: AppFont.fontSize8),
+                              fontSize: AppFont.fontSize10),
                         )
                       ],
                     ),
@@ -216,13 +224,18 @@ class _FavDestinationState extends State<FavDestination> {
                     decoration: const BoxDecoration(
                         color: AppColor.yellow, shape: BoxShape.circle),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        AppIcon.home,
+                        Image.asset(
+                          AppImages.plus,
+                          height: 20,
+                        ),
                         Text(
-                          StringConfig.home,
+                          StringConfig.plus,
                           style: TextStyle(
                               color: AppColor.black,
-                              fontSize: AppFont.fontSize8),
+                              fontSize: AppFont.fontSize10),
                         )
                       ],
                     ),
@@ -238,7 +251,7 @@ class _FavDestinationState extends State<FavDestination> {
                           borderRadius: BorderRadius.circular(10),
                           color: AppColor.white),
                       child: Center(
-                        child: Text(StringConfig.place,
+                        child: Text(StringConfig.plusplace,
                             style: TextStyle(
                                 color: AppColor.black,
                                 fontSize: AppFont.fontSize14)),
@@ -247,16 +260,6 @@ class _FavDestinationState extends State<FavDestination> {
                   )
                 ],
               ),
-              // Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-              //   Column(crossAxisAlignment: CrossAxisAlignment.start,
-              //
-              //     children: [
-              //       Text(StringConfig.notification, style: TextStyle(color: AppColor.black,fontSize: AppFont.fontSize15)),
-              //       Text(StringConfig.message, style: TextStyle(color: AppColor.grey,fontSize: AppFont.fontSize8)),
-              //     ],
-              //   ),
-              //   AppIcon.notification,
-              // ],),
             ],
           ),
         ]),
