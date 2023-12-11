@@ -4,6 +4,7 @@ import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/app_sizes.dart';
 import 'package:rapido/constant/app_text.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
+import 'package:rapido/widget/custom_button.dart';
 
 class DirectionPage extends StatefulWidget {
   const DirectionPage({super.key});
@@ -15,6 +16,10 @@ class DirectionPage extends StatefulWidget {
 class _DirectionPageState extends State<DirectionPage> {
   bool sheet = true;
   String _selectedTime = "";
+  bool OpenBottomSheet = true;
+  bool Newsheet = true;
+  bool Nextsheet = true;
+
   void _handleButtonPress(BuildContext context) {
     // Your condition check
     bool shouldOpenBottomSheet = true; // Change this condition as needed
@@ -59,10 +64,120 @@ class _DirectionPageState extends State<DirectionPage> {
                     ),
                   ),
                 ),
-                Image.asset(
-                    AppImages.loc,
-                    color: Colors.yellow,
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        AppImages.loc,
+                        color: Color(0xFFFFECB3),
+                        height: 20,
+                        width: 20,
+                      ),
+                      Text(MyString.text),
+                    ],
+                  ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        AppImages.loc,
+                        color: Color(0xFFFFECB3),
+                        height: 20,
+                        width: 20,
+                      ),
+                      Text(MyString.set),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 30,
+                        width: 324,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xFFFFECB3),
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(MyString.time),
+                            Text(
+                              MyString.dmy,
+                              style: TextStyle(fontSize: 9),
+                            ),
+                            Text(MyString.clock),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Row(
+                    children: [
+                      Text(
+                        MyString.sdo,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Container(
+                    height: 30,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFFFFF),
+                      boxShadow: CupertinoContextMenu.kEndBoxShadow,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: MyString.search,
+                        prefixIcon: Icon(
+                          color: Color(0xFFFFECB3),
+                          Icons.search,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: Image.asset(
+                    AppImages.loc,
+                    height: 20,
+                    width: 20,
+                    color: Color(0xFFFFECB3),
+                  ),
+                  title: Text(
+                    MyString.set,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                CustomButton(
+                    onTap: () {
+                      if (shouldOpenBottomSheet) {
+                        _openBottomSheet(context);
+                      } else {
+                        // Add logic for other conditions or actions
+                        print('Button pressed, but bottom sheet not opened.');
+                      }
+                    },
+                    title: "Continue"),
               ],
             ),
           );
@@ -173,6 +288,9 @@ class _DirectionPageState extends State<DirectionPage> {
                                                 );
                                                 setState(() {
                                                   _handleButtonPress(context);
+                                                  _openBottomSheet(context);
+                                                  NewSheet(context);
+                                                  NextSheet(context);
                                                   _selectedTime =
                                                       "${picked!.hour}-${picked!.minute}";
                                                 });
@@ -295,6 +413,214 @@ class _DirectionPageState extends State<DirectionPage> {
           ),
         ],
       ),
+    );
+  }
+
+  void _openBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    MyString.dl,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ListTile(
+                  leading: Icon(Icons.location_on),
+                  title: Text("Boys Hostel No.2,Pratap Nagar"),
+                  subtitle: Text("Jaipur"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 200),
+                child: CustomButton(
+                    onTap: () {
+                      if (OpenBottomSheet) {
+                        _openBottomSheet(context);
+                      } else {
+                        // Add logic for other conditions or actions
+                        print('Button pressed, but bottom sheet not opened.');
+                      }
+                    },
+                    title: "Set Pickup location"),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void NewSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    MyString.dl,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ListTile(
+                  leading: Icon(Icons.location_on),
+                  title: Text("Boys Hostel No.2,Pratap Nagar"),
+                  subtitle: Text("Jaipur"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 200),
+                child: CustomButton(
+                    onTap: () {
+                      if (Newsheet) {
+                        _openBottomSheet(context);
+                      } else {
+                        // Add logic for other conditions or actions
+                        print('Button pressed, but bottom sheet not opened.');
+                      }
+                    },
+                    title: "Set Destination location"),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void NextSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Text("By continuing you agree to the T & C"),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  height: 130,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color(0xFFFFECB3),
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              "RIDE DETAILS",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text("09:30",style: TextStyle(color: Colors.grey),),
+                            SizedBox(width: 10),
+                            Icon(Icons.circle_rounded,color: Colors.amberAccent,size: 10),
+                            SizedBox(width: 10),
+                            Text("Sector 8,Jaipur"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text("xx:xx",style: TextStyle(color: Colors.grey),),
+                            SizedBox(width: 10),
+                            Icon(Icons.arrow_downward_rounded,size: 10),
+                            SizedBox(width: 10),
+                            Text("IT Park Mansarover,Jaipur"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.electric_bike,size: 20),
+                    Text("Ride",style: TextStyle(fontWeight: FontWeight.bold),),
+                    SizedBox(width: 40),
+                    Text("(Tuseday 22nd May)"),
+                    Text("09:30 AM"),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(
+                  children: [
+                    Image.asset("assets/img_3.png"),
+                    SizedBox(width: 10),
+
+                    Text("Apply Coupen Code",style: TextStyle(fontWeight: FontWeight.bold),),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 70),
+                child: CustomButton(
+                    onTap: () {
+                      if (Nextsheet) {
+                        _openBottomSheet(context);
+                      } else {
+                        // Add logic for other conditions or actions
+                        print('Button pressed, but bottom sheet not opened.');
+                      }
+                    },
+                    title: "Schedule a ride"),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

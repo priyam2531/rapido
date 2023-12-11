@@ -152,7 +152,7 @@ class _RideBookingState extends State<RideBooking> {
                                 subtitle: Text(state),
                               ),
                               CustomButton(onTap: () {
-                              },title: "Set destination location",),
+                              },title: "Set destination location"),
                             ],
                           );
                   });
