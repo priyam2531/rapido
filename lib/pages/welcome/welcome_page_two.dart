@@ -49,10 +49,8 @@ class WelcomePageTwo extends StatelessWidget {
                     StringConfig.faltrates,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: AppFont.fontSize20),
-
                   ),
                 ),
-
               ],
             ),
           ],

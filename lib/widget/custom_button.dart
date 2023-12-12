@@ -20,7 +20,7 @@ class _CustomButtonState extends State<CustomButton> {
         height: 60,
         width: double.infinity,
         decoration: BoxDecoration(color: AppColor.yellow,borderRadius: BorderRadius.circular(8)),
-        child: Text(widget.title!),
+        child: Center(child: Text(widget.title!,style: TextStyle(fontWeight: FontWeight.bold),),),
       ),
     );
   }
