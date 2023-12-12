@@ -11,4 +11,9 @@ class AppImages{
   static const String Aaplphabet= "assets/A alphabet.png";
   static const String facebbok= "assets/facebook.png";
   static const String google = "assets/google.png";
+  static const String loc= "assets/img_2.png";
+  static const String home= "assets/home.png";
+  static const String chair= "assets/chair.png";
+  static const String plus= "assets/plus.png";
+ static const String pin= "assets/pin.png";
 }
