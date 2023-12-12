@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rapido/constant/app_color.dart';
+import 'package:rapido/constant/font_size.dart';
 
 class CustomButton extends StatefulWidget {
   String? title;

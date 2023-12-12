@@ -50,12 +50,12 @@ class _RideHistoryState extends State<RideHistory> {
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
       Expanded(
-        child: GridView.builder(
-          gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+        child: ListView.builder(
+
           itemCount: data.length,
           itemBuilder: (context, i) {
-        return Card(
+        return
+          Card(
           clipBehavior: Clip.antiAlias,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
