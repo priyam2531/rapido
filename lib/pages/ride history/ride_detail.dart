@@ -152,5 +152,20 @@ class _RideDetailState extends State<RideDetail> {
         )
       ]),
     );
+        appBar: AppBar(
+            backgroundColor: AppColor.white,
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10))),
+            leading: AppIcon.backarrow,
+            title: Center(
+                child: Text(
+              StringConfig.ridehistory,
+              style: TextStyle(color: AppColor.black2),
+            ))),
+        body:
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: []));
   }
 }

@@ -178,6 +178,10 @@ class _DirectionPageState extends State<DirectionPage> {
                       }
                     },
                     title: "Continue"),
+                Image.asset(
+                    AppImages.loc,
+                    color: Colors.yellow,
+                ),
               ],
             ),
           );

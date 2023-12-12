@@ -12,7 +12,8 @@ class WelcomePageFour extends StatefulWidget {
 }
 
 class _WelcomePageFourState extends State<WelcomePageFour> {
-  int _selectedValue = 1;
+  int _selectedValue = 0;
+  List language = ['English', 'Hindi', 'Kannada (ಕನ್ನಡ)', 'Telugu (ತೆಲುಗು)', 'Tamil (ತಮಿಳು)'];
 
   @override
   Widget build(BuildContext context) {
@@ -45,81 +46,32 @@ class _WelcomePageFourState extends State<WelcomePageFour> {
               color: AppColor.yellow,
             ),
           ),
-          RadioListTile(
-            fillColor: MaterialStateProperty.all(AppColor.yellow),
-            title: Text(
-              'English',
-              style: TextStyle(
-                  color:  _selectedValue == 1 ? AppColor.yellow : AppColor.black),
+          Column(
+            children: List.generate(
+              language.length,
+                  (index) {
+                return
+                  RadioListTile(
+                    fillColor: _selectedValue == index + 1
+                        ? MaterialStateProperty.all(AppColor.yellow)
+                        : MaterialStateProperty.all(AppColor.black),
+                    title: Text(
+                      language[index],
+                      style: TextStyle(
+                          color: _selectedValue == index + 1
+                              ? AppColor.yellow
+                              : AppColor.black),
+                    ),
+                    value: index + 1,
+                    groupValue: _selectedValue,
+                    onChanged: (value) {
+                      setState(() {
+                        _selectedValue = value ?? 0;
+                      });
+                    },
+                  );
+              },
             ),
-            value: 1,
-            groupValue:
-                _selectedValue,
-            onChanged: (value) {
-              setState(() {
-                _selectedValue = value!;
-              });
-            },
-          ),
-          RadioListTile(
-            fillColor: MaterialStateProperty.all(AppColor.yellow),
-            title: Text(
-              'Hindi',
-              style: TextStyle(
-                  color: _selectedValue == 2 ? AppColor.yellow : AppColor.black),
-            ),
-            value: 2,
-            groupValue: _selectedValue,
-            onChanged: (value) {
-              setState(() {
-                _selectedValue = value!;
-              });
-            },
-          ),
-          RadioListTile(
-            fillColor: MaterialStateProperty.all(AppColor.yellow),
-            title: Text(
-              'Kannada(ಕನ್ನಡ)',
-              style: TextStyle(
-                  color: _selectedValue == 3 ? AppColor.yellow : AppColor.black),
-            ),
-            value: 3,
-            groupValue: _selectedValue,
-            onChanged: (value) {
-              setState(() {
-                _selectedValue = value!;
-              });
-            },
-          ),
-          RadioListTile(
-            fillColor: MaterialStateProperty.all(AppColor.yellow),
-            title: Text(
-              'Telugu(తెలుగు)',
-              style: TextStyle(
-                  color:  _selectedValue == 4 ? AppColor.yellow : AppColor.black),
-            ),
-            value: 4,
-            groupValue: _selectedValue,
-            onChanged: (value) {
-              setState(() {
-                _selectedValue = value!;
-              });
-            },
-          ),
-          RadioListTile(
-            fillColor: MaterialStateProperty.all(AppColor.yellow),
-            title: Text(
-              'Tamil(தமிழ்)',
-              style: TextStyle(
-                  color: _selectedValue == 5 ? AppColor.yellow : AppColor.black),
-            ),
-            value: 5,
-            groupValue: _selectedValue,
-            onChanged: (value) {
-              setState(() {
-                _selectedValue = value!;
-              });
-            },
           ),
         ],
       ),
