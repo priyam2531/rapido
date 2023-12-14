@@ -60,25 +60,5 @@ class StringConfig{
   static String rideinadvance="Avoid delays in commute by scheduling a ride in advance.";
   static String faltrates="Pass for daily commuters to make their commute easy with flat rates";
   static String intro ="Same day delivery of your packages by our Captains to provide you with a seamless delivery experience.";
-  static String ridehistory ="Ride History";
-  static String date ="8 APR 2022, 11:38";
-  static String date1 ="8 MAR 2022, 11:38";
-  static String date2 ="10 JAN 2022, 18:44";
-  static String trip ="ONGOING TRIP";
-  static String trip1 ="COMPLETED";
-  static String trip2 ="CANCELLED";
-  static String plus ="Plus";
-  static String place1 ="JECRC, Jaipur";
-  static String place2 ="Haldhi Ghati Gate, Jaipur";
-  static String place3 ="Queen’s Road, Jaipur";
-  static String place4 ="Inox (Amrapali Circle), Jaipur";
-  static String time1 ="11:24";
-  static String time2 ="11:38";
-  static String time3 ="18:03";
-  static String time4 ="18:44";
-  static String changeLanguage="Change your preferred language";
-  static String change="Apply Changes";
-  static String plusplace="Search for location on map and select to add another.";
-  static String officeplace="Inox Complex, Building no. 5, Vaishali Nagar, Jaipur";
 
 }

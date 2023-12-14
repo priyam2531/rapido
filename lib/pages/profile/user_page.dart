@@ -32,18 +32,36 @@ class _UserPageState extends State<UserPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                          width: 40,
-                          height: 40,
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle, color: AppColor.white),
-                          child: Center(child: AppIcon.backarrow)),
-                      Container(
-                          width: 40,
-                          height: 40,
-                          decoration: const BoxDecoration(
-                              shape: BoxShape.circle, color: AppColor.white),
-                          child: Center(child: AppIcon.setting))
+                      InkWell(
+                        child: Card(
+                          elevation: 3,
+                          shadowColor: AppColor.black,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40)),
+                          child: Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: AppColor.white, shape: BoxShape.circle),
+                            child: AppIcon.backarrow,
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        child: Card(
+                          elevation: 3,
+                          shadowColor: AppColor.black,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40)),
+                          child: Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                color: AppColor.white, shape: BoxShape.circle),
+                            child: AppIcon.setting,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -78,12 +96,7 @@ class _UserPageState extends State<UserPage> {
                           )),
                     ]),
                   ),
-                  // Container(
-                  //     width: 50,
-                  //     height: 50,
-                  //     decoration: const BoxDecoration(
-                  //         shape: BoxShape.circle, color: AppColor.white),
-                  //     child: Image.asset(AppImages.profile)),
+
                   Text(
                     StringConfig.name,
                     style: TextStyle(

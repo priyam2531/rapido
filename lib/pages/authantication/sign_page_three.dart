@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:otp_text_field/otp_text_field.dart';
+import 'package:otp_text_field/style.dart';
 import 'package:rapido/config/string_config.dart';
 import 'package:rapido/constant/app_color.dart';
 import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
-import 'package:otp_text_field/otp_field.dart';
-import 'package:otp_text_field/style.dart';
 import 'package:rapido/constant/icon_page.dart';
 
 class Signpagethree extends StatefulWidget {

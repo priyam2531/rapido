@@ -47,7 +47,7 @@ class _RideDetailState extends State<RideDetail> {
         Card(
           clipBehavior: Clip.antiAlias,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           child: Container(
             decoration: BoxDecoration(
               color: AppColor.white,
@@ -98,7 +98,7 @@ class _RideDetailState extends State<RideDetail> {
                                 Center(child: AppIcon.round),
                                 Padding(
                                   padding:
-                                      EdgeInsets.all(AppMargin.marginSize9),
+                                  EdgeInsets.all(AppMargin.marginSize9),
                                   child: Container(
                                     height: 50,
                                     width: 1,
@@ -152,20 +152,5 @@ class _RideDetailState extends State<RideDetail> {
         )
       ]),
     );
-        appBar: AppBar(
-            backgroundColor: AppColor.white,
-            clipBehavior: Clip.antiAlias,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10))),
-            leading: AppIcon.backarrow,
-            title: Center(
-                child: Text(
-              StringConfig.ridehistory,
-              style: TextStyle(color: AppColor.black2),
-            ))),
-        body:
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: []));
   }
 }
