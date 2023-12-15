@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rapido/constant/app_images.dart';
-import 'package:rapido/constant/app_sizes.dart';
 import 'package:rapido/constant/app_text.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
+import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/widget/custom_button.dart';
 
 class DirectionPage extends StatefulWidget {

@@ -16,6 +16,8 @@ class AppIcon {
   static Icon downarrow = Icon(Icons.arrow_drop_down_sharp, color: AppColor.black2,size: 20,);
 
 
+  static Icon menu =  Icon(Icons.menu);
+  static Icon minus = Icon(CupertinoIcons.minus);
   static Icon home = Icon(Icons.home, color: AppColor.white,);
   static Icon gym = Icon(CupertinoIcons.plus, color: AppColor.black,);
   static Icon chair = Icon(Icons.chair_alt_outlined, color: AppColor.white,);

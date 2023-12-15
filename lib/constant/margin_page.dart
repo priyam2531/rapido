@@ -25,3 +25,6 @@ double padding20 = 20.0;
 double padding30 = 30.0;
 double padding40 = 40.0;
 double padding50 = 50.0;
+
+double radius20 = 20.0;
+double radius30 = 30.0;
