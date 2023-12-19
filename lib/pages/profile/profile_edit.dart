@@ -17,15 +17,20 @@ class _ProfileEditState extends State<ProfileEdit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor:Colors.transparent,elevation: 0,
+          leading: InkWell(
+            child: Card(elevation: 3,shadowColor: AppColor.black,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
+              child: Container(
+                decoration:
+                BoxDecoration(color: AppColor.white,shape: BoxShape.circle),
+                child: AppIcon.backarrow,
+              ),
+            ),
+          )),
       body: Padding(
         padding: EdgeInsets.all(AppMargin.marginSize9),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: AppColor.white),
-              child: Center(child: Center(child: AppIcon.backarrow))),
+
           Center(
             child: Container(
                 width: 60,

@@ -15,18 +15,44 @@ class FavDestination extends StatefulWidget {
 }
 
 class _FavDestinationState extends State<FavDestination> {
+  List data = [
+    {
+      'img': AppImages.home,
+      'txt': StringConfig.home,
+      'place': StringConfig.place,
+    },
+    {
+      'img': AppImages.chair,
+      'txt': StringConfig.chair,
+      'place': StringConfig.officeplace,
+    },
+    {
+      'img': AppImages.gym,
+      'txt': StringConfig.gym,
+      'place': StringConfig.gymplace,
+    },
+    {
+      'img': AppImages.plus,
+      'txt': StringConfig.plus,
+      'place': StringConfig.plusplace,
+    }
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor:Colors.transparent,elevation: 0,
+          leading: InkWell(
+            child: Card(elevation: 3,shadowColor: AppColor.black,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
+              child: Container(
+                decoration:
+                BoxDecoration(color: AppColor.white,shape: BoxShape.circle),
+                child: AppIcon.backarrow,
+              ),
+            ),
+          )),
       body: Padding(
         padding: EdgeInsets.all(AppMargin.marginSize9),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: AppColor.white),
-              child: Center(child: Center(child: AppIcon.backarrow))),
           Row(
             children: [
               Padding(
@@ -44,14 +70,14 @@ class _FavDestinationState extends State<FavDestination> {
                   Text(
                     StringConfig.favdestination,
                     style: TextStyle(
-                        color: AppColor.grey,
+                        color: AppColor.black,
                         fontSize: AppFont.fontSize20,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
                     StringConfig.favorite,
                     style: TextStyle(
-                        color: AppColor.grey,
+                        color: AppColor.black,
                         fontSize: AppFont.fontSize10,
                         fontWeight: FontWeight.bold),
                   )
@@ -59,208 +85,60 @@ class _FavDestinationState extends State<FavDestination> {
               )
             ],
           ),
-          Column(
-            children: [
-              const SizedBox(
-                height: 30,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: const BoxDecoration(
-                        color: AppColor.yellow, shape: BoxShape.circle),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          AppImages.home,
-                          height: 20,
-                        ),
-                        Text(
-                          StringConfig.home,
-                          style: TextStyle(
-                              color: AppColor.black,
-                              fontSize: AppFont.fontSize10),
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Card(
-                    child: Container(
-                      height: 40,
-                      width: 300,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: AppColor.white),
-                      child: Center(
-                        child: Text(StringConfig.place,
-                            style: TextStyle(
-                                color: AppColor.black,
-                                fontSize: AppFont.fontSize14)),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                children: [
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: const BoxDecoration(
-                        color: AppColor.yellow, shape: BoxShape.circle),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          AppImages.chair,
-                          height: 20,
-                        ),
-                        Text(
-                          StringConfig.chair,
-                          style: TextStyle(
-                              color: AppColor.black,
-                              fontSize: AppFont.fontSize10),
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Card(
-                    child: Container(
-                      height: 40,
-                      width: 300,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: AppColor.white),
-                      child: Center(
-                        child: Text(StringConfig.officeplace,
-                            style: TextStyle(
-                                color: AppColor.black,
-                                fontSize: AppFont.fontSize14)),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: const BoxDecoration(
-                        color: AppColor.yellow, shape: BoxShape.circle),
-                    child: Column(
+          Expanded(
+            child: ListView.builder(
+              itemCount: data.length,
+              itemBuilder: (context, i) {
+                return Padding(
+                  padding: EdgeInsets.all(AppMargin.marginSize11),
+                  child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Image.asset(
-                          AppImages.gym,
-                          height: 20,
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: const BoxDecoration(
+                              color: AppColor.yellow, shape: BoxShape.circle),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                data[i]['img'],
+                                height: 20,
+                              ),
+                              Text(
+                                data[i]['txt'].toString(),
+                                style: TextStyle(
+                                    color: AppColor.black,
+                                    fontSize: AppFont.fontSize10),
+                              )
+                            ],
+                          ),
                         ),
-                        Text(
-                          StringConfig.gym,
-                          style: TextStyle(
-                              color: AppColor.black,
-                              fontSize: AppFont.fontSize10),
+                        Expanded(
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 24.0),
+                            child: Card(shadowColor: AppColor.black,
+                              child: Container(
+                                height: 50,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: AppColor.white),
+                                child: Center(
+                                  child: Text(data[i]['place'].toString(),
+                                      style: TextStyle(
+                                          color: AppColor.black,
+                                          fontSize: AppFont.fontSize14)),
+                                ),
+                              ),
+                            ),
+                          ),
                         )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Card(
-                    child: Container(
-                      height: 40,
-                      width: 300,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: AppColor.white),
-                      child: Center(
-                        child: Text(StringConfig.gymplace,
-                            style: TextStyle(
-                                color: AppColor.black,
-                                fontSize: AppFont.fontSize14)),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    height: 40,
-                    width: 40,
-                    decoration: const BoxDecoration(
-                        color: AppColor.yellow, shape: BoxShape.circle),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset(
-                          AppImages.plus,
-                          height: 20,
-                        ),
-                        Text(
-                          StringConfig.plus,
-                          style: TextStyle(
-                              color: AppColor.black,
-                              fontSize: AppFont.fontSize10),
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
-                  ),
-                  Card(
-                    child: Container(
-                      height: 40,
-                      width: 300,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: AppColor.white),
-                      child: Center(
-                        child: Text(StringConfig.plusplace,
-                            style: TextStyle(
-                                color: AppColor.black,
-                                fontSize: AppFont.fontSize14)),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ],
+                      ]),
+                );
+              },
+            ),
           ),
         ]),
       ),

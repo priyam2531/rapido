@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:rapido/config/string_config.dart';
 import 'package:rapido/constant/app_images.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
+import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/widget/custom_button.dart';
-
 
 class DirectionPage extends StatefulWidget {
   const DirectionPage({super.key});
@@ -175,12 +175,18 @@ class _DirectionPageState extends State<DirectionPage> {
                       Navigator.pop(context);
                       if (shouldOpenBottomSheet) {
                         _openBottomSheet(context);
-                      } else {
+                      } else
+                      {
+
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
                       }
                     },
                     title: "Continue"),
+                Image.asset(
+                    AppImages.loc,
+                    color: Colors.yellow,
+                ),
               ],
             ),
           );
@@ -467,7 +473,7 @@ class _DirectionPageState extends State<DirectionPage> {
     );
   }
 
-  void newSheet(BuildContext context) {
+  void NewSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -513,7 +519,7 @@ class _DirectionPageState extends State<DirectionPage> {
     );
   }
 
-  void nextSheet(BuildContext context) {
+  void NextSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
