@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rapido/config/string_config.dart';
 import 'package:rapido/constant/app_images.dart';
-import 'package:rapido/constant/app_sizes.dart';
-import 'package:rapido/constant/app_text.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:rapido/widget/custom_button.dart';
+
 
 class DirectionPage extends StatefulWidget {
   const DirectionPage({super.key});
@@ -19,6 +19,8 @@ class _DirectionPageState extends State<DirectionPage> {
   bool OpenBottomSheet = true;
   bool Newsheet = true;
   bool Nextsheet = true;
+  bool Confirmpage = true;
+
 
   void _handleButtonPress(BuildContext context) {
     // Your condition check
@@ -36,7 +38,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 Row(
                   children: [
                     Text(
-                      MyString.location,
+                      StringConfig.location,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -55,7 +57,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: MyString.search,
+                        hintText: StringConfig.search,
                         prefixIcon: Icon(
                           color: Color(0xFFFFECB3),
                           Icons.search,
@@ -74,7 +76,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         height: 20,
                         width: 20,
                       ),
-                      Text(MyString.text),
+                      Text(StringConfig.text),
                     ],
                   ),
                 ),
@@ -88,7 +90,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         height: 20,
                         width: 20,
                       ),
-                      Text(MyString.set),
+                      Text(StringConfig.set),
                     ],
                   ),
                 ),
@@ -110,12 +112,12 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(MyString.time),
+                            Text(StringConfig.time),
                             Text(
-                              MyString.dmy,
+                              StringConfig.dmy,
                               style: TextStyle(fontSize: 9),
                             ),
-                            Text(MyString.clock),
+                            Text(StringConfig.clock),
                           ],
                         ),
                       ),
@@ -127,7 +129,7 @@ class _DirectionPageState extends State<DirectionPage> {
                   child: Row(
                     children: [
                       Text(
-                        MyString.sdo,
+                        StringConfig.sdo,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -147,7 +149,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: MyString.search,
+                        hintText: StringConfig.search,
                         prefixIcon: Icon(
                           color: Color(0xFFFFECB3),
                           Icons.search,
@@ -164,12 +166,13 @@ class _DirectionPageState extends State<DirectionPage> {
                     color: Color(0xFFFFECB3),
                   ),
                   title: Text(
-                    MyString.set,
+                    StringConfig.set,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 CustomButton(
                     onTap: () {
+                      Navigator.pop(context);
                       if (shouldOpenBottomSheet) {
                         _openBottomSheet(context);
                       } else {
@@ -197,15 +200,15 @@ class _DirectionPageState extends State<DirectionPage> {
           color: Color(0xff000000),
         ),
         title: Text(
-          MyString.name,
+          StringConfig.nameuser,
           style: TextStyle(
             color: Color(0xff000000),
           ),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.horizontal(
-            left: Radius.circular(radius20),
-            right: Radius.circular(radius20),
+            left: Radius.circular(20),
+            right: Radius.circular(20),
           ),
         ),
       ),
@@ -230,106 +233,108 @@ class _DirectionPageState extends State<DirectionPage> {
                           builder: (context) {
                             return StatefulBuilder(
                                 builder: (context, setState) {
-                              return sheet
-                                  ? Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        children: [
-                                          const TextField(
-                                            decoration: InputDecoration(
-                                              prefixIcon: Icon(
-                                                Icons.search,
+                                  return sheet
+                                      ? Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: [
+                                        const TextField(
+                                          decoration: InputDecoration(
+                                            prefixIcon: Icon(
+                                              Icons.search,
+                                              color: Color(0xFFFFECB3),
+                                            ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFFFECB3),
                                               ),
-                                              enabledBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Color(0xFFFFECB3),
-                                                ),
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(30)),
-                                              ),
-                                              hintText: MyString.type,
-                                              border: OutlineInputBorder(),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(30)),
                                             ),
+                                            hintText: StringConfig.type,
+                                            border: OutlineInputBorder(),
                                           ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 20),
-                                            child: ListTile(
-                                              onTap: () {
-                                                setState(() {
-                                                  sheet = false;
-                                                });
-                                              },
-                                              leading: Icon(
-                                                  Icons.location_on_sharp,
-                                                  size: 30),
-                                              title: Text(
-                                                MyString.side,
-                                                textScaleFactor: 1,
-                                              ),
-                                              subtitle: Text(MyString.city),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    )
-                                  : Column(
-                                      children: [
+                                        ),
                                         Padding(
                                           padding: EdgeInsets.only(top: 20),
                                           child: ListTile(
                                             onTap: () {
-                                              setState(() async {
+                                              setState(() {
                                                 sheet = false;
-                                                final TimeOfDay? picked =
-                                                    await showTimePicker(
-                                                  context: context,
-                                                  initialTime: TimeOfDay.now(),
-                                                );
-                                                setState(() {
-                                                  _handleButtonPress(context);
-                                                  _openBottomSheet(context);
-                                                  NewSheet(context);
-                                                  NextSheet(context);
-                                                  _selectedTime =
-                                                      "${picked!.hour}-${picked!.minute}";
-                                                });
                                               });
                                             },
                                             leading: Icon(
                                                 Icons.location_on_sharp,
                                                 size: 30),
                                             title: Text(
-                                              MyString.side,
+                                              StringConfig.side,
                                               textScaleFactor: 1,
                                             ),
-                                            subtitle: Text(MyString.city),
-                                            trailing: Text(_selectedTime),
+                                            subtitle: Text(StringConfig.city),
                                           ),
                                         ),
-                                        Divider(
-                                          thickness: 1,
-                                          color: Color(0xff616A76),
-                                        ),
                                       ],
-                                    );
-                            });
+                                    ),
+                                  )
+                                      : Column(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 20),
+                                        child: ListTile(
+                                          onTap: () {
+                                            setState(() async {
+                                              sheet = false;
+                                              final TimeOfDay? picked =
+                                              await showTimePicker(
+                                                context: context,
+                                                initialTime: TimeOfDay.now(),
+                                              );
+                                              setState(() {
+                                                _handleButtonPress(context);
+                                                _openBottomSheet(context);
+                                                newSheet(context);
+                                                nextSheet(context);
+                                                confirmpage(context);
+                                                _selectedTime =
+                                                "${picked!.hour}-${picked!
+                                                    .minute}";
+                                              });
+                                            });
+                                          },
+                                          leading: Icon(
+                                              Icons.location_on_sharp,
+                                              size: 30),
+                                          title: Text(
+                                            StringConfig.side,
+                                            textScaleFactor: 1,
+                                          ),
+                                          subtitle: Text(StringConfig.city),
+                                          trailing: Text(_selectedTime),
+                                        ),
+                                      ),
+                                      Divider(
+                                        thickness: 1,
+                                        color: Color(0xff616A76),
+                                      ),
+                                    ],
+                                  );
+                                });
                           },
                         );
                       },
                       child: Container(
                         height: 60,
                         width: 60,
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.home),
-                            Text(MyString.place),
-                          ],
-                        ),
                         decoration: BoxDecoration(
                           color: const Color(0xFFF3A81C),
                           borderRadius: BorderRadius.circular(30),
+                        ),
+                        child:  Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.home),
+                            Text(StringConfig.place),
+                          ],
                         ),
                       ),
                     ),
@@ -360,7 +365,7 @@ class _DirectionPageState extends State<DirectionPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.chair),
-                            Text(MyString.work),
+                            Text(StringConfig.work),
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -397,7 +402,7 @@ class _DirectionPageState extends State<DirectionPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.sports_gymnastics),
-                            Text(MyString.gym),
+                            Text(StringConfig.gym),
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -428,7 +433,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    MyString.dl,
+                    StringConfig.dl,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -445,6 +450,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 200),
                 child: CustomButton(
                     onTap: () {
+                      Navigator.pop(context);
                       if (OpenBottomSheet) {
                         _openBottomSheet(context);
                       } else {
@@ -461,7 +467,7 @@ class _DirectionPageState extends State<DirectionPage> {
     );
   }
 
-  void NewSheet(BuildContext context) {
+  void newSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -473,7 +479,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    MyString.dl,
+                    StringConfig.dl,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -490,8 +496,9 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 200),
                 child: CustomButton(
                     onTap: () {
+                      Navigator.pop(context);
                       if (Newsheet) {
-                        _openBottomSheet(context);
+                        newSheet(context);
                       } else {
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
@@ -506,7 +513,7 @@ class _DirectionPageState extends State<DirectionPage> {
     );
   }
 
-  void NextSheet(BuildContext context) {
+  void nextSheet(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -549,9 +556,12 @@ class _DirectionPageState extends State<DirectionPage> {
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
                           children: [
-                            Text("09:30",style: TextStyle(color: Colors.grey),),
+                            Text(
+                              "09:30", style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
-                            Icon(Icons.circle_rounded,color: Colors.amberAccent,size: 10),
+                            Icon(
+                                Icons.circle_rounded, color: Colors.amberAccent,
+                                size: 10),
                             SizedBox(width: 10),
                             Text("Sector 8,Jaipur"),
                           ],
@@ -561,9 +571,10 @@ class _DirectionPageState extends State<DirectionPage> {
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
                           children: [
-                            Text("xx:xx",style: TextStyle(color: Colors.grey),),
+                            Text(
+                              "xx:xx", style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
-                            Icon(Icons.arrow_downward_rounded,size: 10),
+                            Icon(Icons.arrow_downward_rounded, size: 10),
                             SizedBox(width: 10),
                             Text("IT Park Mansarover,Jaipur"),
                           ],
@@ -577,8 +588,9 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 10),
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Icon(Icons.electric_bike,size: 20),
-                    Text("Ride",style: TextStyle(fontWeight: FontWeight.bold),),
+                    Icon(Icons.electric_bike, size: 20),
+                    Text(
+                      "Ride", style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(width: 40),
                     Text("(Tuseday 22nd May)"),
                     Text("09:30 AM"),
@@ -596,7 +608,8 @@ class _DirectionPageState extends State<DirectionPage> {
                     Image.asset("assets/img_3.png"),
                     SizedBox(width: 10),
 
-                    Text("Apply Coupen Code",style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text("Apply Coupen Code",
+                      style: TextStyle(fontWeight: FontWeight.bold),),
                   ],
                 ),
               ),
@@ -608,8 +621,137 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 70),
                 child: CustomButton(
                     onTap: () {
+                      Navigator.pop(context);
                       if (Nextsheet) {
-                        _openBottomSheet(context);
+                        newSheet(context);
+                      } else {
+                        // Add logic for other conditions or actions
+                        print('Button pressed, but bottom sheet not opened.');
+                      }
+                    },
+                    title: "Schedule a ride"),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void confirmpage(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Text("By continuing you agree to the T & C"),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  height: 130,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Color(0xFFFFECB3),
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              "RIDE DETAILS",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              "09:30", style: TextStyle(color: Colors.grey),),
+                            SizedBox(width: 10),
+                            Icon(
+                                Icons.circle_rounded, color: Colors.amberAccent,
+                                size: 10),
+                            SizedBox(width: 10),
+                            Text("Sector 8,Jaipur"),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              "xx:xx", style: TextStyle(color: Colors.grey),),
+                            SizedBox(width: 10),
+                            Icon(Icons.arrow_downward_rounded, size: 10),
+                            SizedBox(width: 10),
+                            Text("IT Park Mansarover,Jaipur"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(Icons.electric_bike, size: 20),
+                    Text(
+                      "Ride", style: TextStyle(fontWeight: FontWeight.bold),),
+                    SizedBox(width: 40),
+                    Text("(Tuseday 22nd May)"),
+                    Text("09:30 AM"),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(
+                  children: [
+                    Image.asset("assets/img_3.png"),
+                    SizedBox(width: 10),
+
+                    Text("Rapido 30",
+                      style: TextStyle(fontWeight: FontWeight.bold),),
+                    SizedBox(width: 130),
+                    Text(
+                      "-Rs 30", style: TextStyle(color: Colors.amberAccent),),
+                  ],
+                ),
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 70),
+                child: CustomButton(
+                    onTap: () {
+                      Navigator.pop(context);
+                      if (Confirmpage) {
+                        confirmpage(context);
                       } else {
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
