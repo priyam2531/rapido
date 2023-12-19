@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rapido/config/string_config.dart';
 import 'package:rapido/constant/app_images.dart';
-import 'package:rapido/constant/app_text.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/widget/custom_button.dart';
@@ -36,7 +36,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 Row(
                   children: [
                     Text(
-                      MyString.location,
+                      StringConfig.location,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -55,7 +55,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: MyString.search,
+                        hintText: StringConfig.search,
                         prefixIcon: Icon(
                           color: Color(0xFFFFECB3),
                           Icons.search,
@@ -74,7 +74,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         height: 20,
                         width: 20,
                       ),
-                      Text(MyString.text),
+                      Text(StringConfig.text),
                     ],
                   ),
                 ),
@@ -88,7 +88,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         height: 20,
                         width: 20,
                       ),
-                      Text(MyString.set),
+                      Text(StringConfig.set),
                     ],
                   ),
                 ),
@@ -110,12 +110,12 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text(MyString.time),
+                            Text(StringConfig.time),
                             Text(
-                              MyString.dmy,
+                              StringConfig.dmy,
                               style: TextStyle(fontSize: 9),
                             ),
-                            Text(MyString.clock),
+                            Text(StringConfig.clock),
                           ],
                         ),
                       ),
@@ -127,7 +127,7 @@ class _DirectionPageState extends State<DirectionPage> {
                   child: Row(
                     children: [
                       Text(
-                        MyString.sdo,
+                        StringConfig.sdo,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -147,7 +147,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: MyString.search,
+                        hintText: StringConfig.search,
                         prefixIcon: Icon(
                           color: Color(0xFFFFECB3),
                           Icons.search,
@@ -164,7 +164,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     color: Color(0xFFFFECB3),
                   ),
                   title: Text(
-                    MyString.set,
+                    StringConfig.set,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -172,7 +172,9 @@ class _DirectionPageState extends State<DirectionPage> {
                     onTap: () {
                       if (shouldOpenBottomSheet) {
                         _openBottomSheet(context);
-                      } else {
+                      } else
+                      {
+
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
                       }
@@ -201,7 +203,7 @@ class _DirectionPageState extends State<DirectionPage> {
           color: Color(0xff000000),
         ),
         title: Text(
-          MyString.name,
+          StringConfig.name,
           style: TextStyle(
             color: Color(0xff000000),
           ),
@@ -252,7 +254,7 @@ class _DirectionPageState extends State<DirectionPage> {
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(30)),
                                               ),
-                                              hintText: MyString.type,
+                                              hintText: StringConfig.type,
                                               border: OutlineInputBorder(),
                                             ),
                                           ),
@@ -268,10 +270,10 @@ class _DirectionPageState extends State<DirectionPage> {
                                                   Icons.location_on_sharp,
                                                   size: 30),
                                               title: Text(
-                                                MyString.side,
+                                                StringConfig.side,
                                                 textScaleFactor: 1,
                                               ),
-                                              subtitle: Text(MyString.city),
+                                              subtitle: Text(StringConfig.city),
                                             ),
                                           ),
                                         ],
@@ -304,10 +306,10 @@ class _DirectionPageState extends State<DirectionPage> {
                                                 Icons.location_on_sharp,
                                                 size: 30),
                                             title: Text(
-                                              MyString.side,
+                                              StringConfig.side,
                                               textScaleFactor: 1,
                                             ),
-                                            subtitle: Text(MyString.city),
+                                            subtitle: Text(StringConfig.city),
                                             trailing: Text(_selectedTime),
                                           ),
                                         ),
@@ -324,11 +326,11 @@ class _DirectionPageState extends State<DirectionPage> {
                       child: Container(
                         height: 60,
                         width: 60,
-                        child: const Column(
+                        child:  Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.home),
-                            Text(MyString.place),
+                            Text(StringConfig.place),
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -364,7 +366,7 @@ class _DirectionPageState extends State<DirectionPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.chair),
-                            Text(MyString.work),
+                            Text(StringConfig.work),
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -401,7 +403,7 @@ class _DirectionPageState extends State<DirectionPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.sports_gymnastics),
-                            Text(MyString.gym),
+                            Text(StringConfig.gym),
                           ],
                         ),
                         decoration: BoxDecoration(
@@ -432,7 +434,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    MyString.dl,
+                    StringConfig.dl,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -477,7 +479,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    MyString.dl,
+                    StringConfig.dl,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],

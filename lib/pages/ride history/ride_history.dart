@@ -48,7 +48,8 @@ class _RideHistoryState extends State<RideHistory> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: AppColor.white,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
 
           leading: InkWell(onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {

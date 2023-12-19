@@ -40,6 +40,9 @@ class StringConfig{
   static String Resendcode="Resend code (0:30)";
   static String tearms="Tearms";
   static String and="and";
+  static String captain="Captain";
+  static  String dinesh = "Dinesh";
+  static  String splender = "Splendor + (RJ14QS8055)";
   static String ofRapido="of Rapido.";
   static String Privacpolicy="Privacy Policy";
 
@@ -61,4 +64,27 @@ class StringConfig{
   static String faltrates="Pass for daily commuters to make their commute easy with flat rates";
   static String intro ="Same day delivery of your packages by our Captains to provide you with a seamless delivery experience.";
 
+  static const String hi  = "Hi, Users.";
+
+  static const String work= "Office";
+  static const String rate= "4.8";
+  static const String rs= "Rs. 127";
+  static const String recipt= "Show receipt";
+  static const String issue= "Raise issue";
+
+  static const String type = "Search Destination";
+  static const String side = "Schedule a ride";
+  static const String city = "Jaipur";
+  static const String code2 = "****8295";
+  static const String location="Pickup Location";
+  static const String search="Search Location";
+  static const String text= "Current Location";
+  static const String set="Set on a map";
+  static const String time = "Time";
+  static const String dmy = "Tuseday 22nd May";
+  static const String clock= "09:30 AM";
+  static const String sdo= "Select drop off";
+  static const String button = "Continue";
+
+  static const String dl="Destination Location";
 }
