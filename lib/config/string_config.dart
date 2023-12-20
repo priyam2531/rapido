@@ -94,7 +94,9 @@
   static const String sdo= "Select drop off";
   static const String button = "Continue";
   static const String dl="Destination Location";
-
+  static String captaindetail="Captain Details";
+  static  String hero = "Hero Splendor + ";
+  static String ridedetail ="Ride Detail";
 
   static String tearms="Tearms";
   static String and="and";

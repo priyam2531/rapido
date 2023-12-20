@@ -15,7 +15,7 @@ class AppIcon {
   static Icon downarrow = Icon(Icons.arrow_drop_down_sharp, color: AppColor.black2,size: 20,);
   static Icon menu =  Icon(Icons.menu);
   static Icon minus = Icon(CupertinoIcons.minus);
-
+  static Icon star1 = Icon(Icons.star,color: AppColor.white,);
   static Icon frontarrow = Icon(Icons.arrow_forward_ios_sharp,size: 15,color: AppColor.grey,);
   static Icon star = Icon(Icons.star,color: AppColor.yellow,);
   static Icon star2 = Icon(Icons.star_border);

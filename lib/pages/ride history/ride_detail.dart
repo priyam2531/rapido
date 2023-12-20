@@ -5,6 +5,7 @@ import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
 import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/pages/profile/user_page.dart';
+import 'package:rapido/pages/ride%20history/captain_detail.dart';
 import 'package:rapido/pages/ride%20history/ride_history.dart';
 import 'package:rapido/widget/custom_button.dart';
 
@@ -36,7 +37,8 @@ class _RideDetailState extends State<RideDetail> {
                 child: AppIcon.backarrow,
               ),
             ),
-          )),
+          )
+      ,title: Center(child: Text(StringConfig.ridedetail,style: TextStyle(color: AppColor.black),))),
       body: ListView(
         children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -177,7 +179,8 @@ class _RideDetailState extends State<RideDetail> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: AppColor.white),
-                        child: Row(
+                        child:
+                        Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
@@ -212,7 +215,7 @@ class _RideDetailState extends State<RideDetail> {
                                   onTap: () {
                                     Navigator.push(context, MaterialPageRoute(
                                       builder: (context) {
-                                        return RideHistory();
+                                        return CaptainDetail();
                                       },
                                     ));
                                   },
