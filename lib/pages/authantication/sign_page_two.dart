@@ -58,7 +58,7 @@ class _signpagetwoState extends State<signpagetwo> {
                           fontSize: AppFont.fontSize25,
                           fontWeight: FontWeight.bold)),
                 ),
-                AppIcon.arrow
+                AppIcon.frontarrow,
               ],
             ),
             Padding(

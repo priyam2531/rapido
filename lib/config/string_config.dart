@@ -1,93 +1,5 @@
-class StringConfig{
-  static String name ="User - name";
-  static String number ="+91-99887 76655";
-  static String history ="RIDE HISTORY";
-  static String payment ="PAYMENT";
-  static String home ="Home";
-  static String gym ="Gym";
-  static String ridehistory ="Ride History";
-  static String date ="8 APR 2022, 11:38";
-  static String date1 ="8 MAR 2022, 11:38";
-  static String date2 ="10 JAN 2022, 18:44";
-  static String trip ="ONGOING TRIP";
-  static String trip1 ="COMPLETED";
-  static String trip2 ="CANCELLED";
-  static String chair ="Office";
-  static String plus ="Plus";
-  static String place1 ="JECRC, Jaipur";
-  static String place2 ="Haldhi Ghati Gate, Jaipur";
-  static String place3 ="Queen’s Road, Jaipur";
-  static String place4 ="Inox (Amrapali Circle), Jaipur";
-  static String time1 ="11:24";
-  static String time2 ="11:38";
-  static String time3 ="18:03";
-  static String time4 ="18:44";
-  static String code ="PROMOCODE";
-  static String support ="SUPPORT";
-  static String signout ="Sign out";
-  static String commuter ="Commuter";
-  static String email ="mailto:2810mgg@gmail.com";
-  static String fav ="Favorite Places";
-  static String language ="App language";
-  static String notification ="Notfications";
-  static String favdestination ="Set Favourite Destinations";
-  static String favorite ="You can add upto 4 favourites";
-  static String message ="For receiving driver messages";
-  static String packagdelivary ="Package-Delivery";
-  static String introducing="Introducing";
-  static String repidopowerpass="Rapido Power Pass";
-  static String schedulearide="Schedule a Ride";
-  static String Resendcode="Resend code (0:30)";
-  static String tearms="Tearms";
-  static String and="and";
-  static String captain="Captain";
-  static  String dinesh = "Dinesh";
-  static  String splender = "Splendor + (RJ14QS8055)";
-  static String ofRapido="of Rapido.";
-  static String Privacpolicy="Privacy Policy";
 
-  static String bycontinuing="By continuing,you agree to the";
-
-  static String viasms="A code has been sent to  +91 99887 76655 via SMS";
-
-  static String chooseaproced="Choose a Language to proceed:";
-  static String place="Boys Hostel No. 2, Pratap Nagar, Jaipur";
-  static String changeLanguage="Change your preferred language";
-  static String change="Apply Changes";
-  static String Entermobileno="Enter Mobile No.";
-  static String Enterotp="Enter OTP ";
-  static String senttotheno="sent to the no.:";
-  static String gymplace="Anytime Fitness Gym, Pratap Nagar, Sanganer, Jaipur";
-  static String plusplace="Search for location on map and select to add another.";
-  static String officeplace="Inox Complex, Building no. 5, Vaishali Nagar, Jaipur";
-  static String rideinadvance="Avoid delays in commute by scheduling a ride in advance.";
-  static String faltrates="Pass for daily commuters to make their commute easy with flat rates";
-  static String intro ="Same day delivery of your packages by our Captains to provide you with a seamless delivery experience.";
-
-  static const String hi  = "Hi, Users.";
-
-  static const String work= "Office";
-  static const String rate= "4.8";
-  static const String rs= "Rs. 127";
-  static const String recipt= "Show receipt";
-  static const String issue= "Raise issue";
-
-  static const String type = "Search Destination";
-  static const String side = "Schedule a ride";
-  static const String city = "Jaipur";
-  static const String code2 = "****8295";
-  static const String location="Pickup Location";
-  static const String search="Search Location";
-  static const String text= "Current Location";
-  static const String set="Set on a map";
-  static const String time = "Time";
-  static const String dmy = "Tuseday 22nd May";
-  static const String clock= "09:30 AM";
-  static const String sdo= "Select drop off";
-  static const String button = "Continue";
-
-  static const String dl="Destination Location";
-class StringConfig {
+  class StringConfig {
   static String name = "User - name";
   static String number = "+91-99887 76655";
   static String history = "RIDE HISTORY";
@@ -172,6 +84,9 @@ class StringConfig {
   static const String location="Pickup Location";
   static const String search="Search Location";
   static const String text= "Current Location";
+  static String captain="Captain";
+  static  String dinesh = "Dinesh";
+  static String Resendcode="Resend code (0:30)";
   static const String set="Set on a map";
   static const String timer = "Time";
   static const String dte = "Tuseday 22nd May";
@@ -179,4 +94,27 @@ class StringConfig {
   static const String sdo= "Select drop off";
   static const String button = "Continue";
   static const String dl="Destination Location";
-}
+
+
+  static String tearms="Tearms";
+  static String and="and";
+  static  String splender = "Splendor + (RJ14QS8055)";
+  static String ofRapido="of Rapido.";
+  static String Privacpolicy="Privacy Policy";
+
+  static String bycontinuing="By continuing,you agree to the";
+
+  static String viasms="A code has been sent to  +91 99887 76655 via SMS";
+
+  static String Entermobileno="Enter Mobile No.";
+  static String Enterotp="Enter OTP ";
+  static String senttotheno="sent to the no.:";
+
+  static const String hi  = "Hi, Users.";
+  static const String rate= "4.8";
+  static const String recipt= "Show receipt";
+  static const String issue= "Raise issue";
+
+  static const String code2 = "****8295";
+
+  }

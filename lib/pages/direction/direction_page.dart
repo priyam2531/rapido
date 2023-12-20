@@ -298,8 +298,8 @@ class _DirectionPageState extends State<DirectionPage> {
                                               setState(() {
                                                 _handleButtonPress(context);
                                                 _openBottomSheet(context);
-                                                newSheet(context);
-                                                nextSheet(context);
+                                                NewSheet(context);
+                                                NextSheet(context);
                                                 confirmpage(context);
                                                 _selectedTime =
                                                 "${picked!.hour}-${picked!
@@ -504,7 +504,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     onTap: () {
                       Navigator.pop(context);
                       if (Newsheet) {
-                        newSheet(context);
+                        NewSheet(context);
                       } else {
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
@@ -629,7 +629,7 @@ class _DirectionPageState extends State<DirectionPage> {
                     onTap: () {
                       Navigator.pop(context);
                       if (Nextsheet) {
-                        newSheet(context);
+                        NewSheet(context);
                       } else {
                         // Add logic for other conditions or actions
                         print('Button pressed, but bottom sheet not opened.');
