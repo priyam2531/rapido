@@ -50,7 +50,7 @@ class _LanguagePageState extends State<LanguagePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Image.asset(AppImages.logo),
-                      Image.asset(AppImages.Aaplphabet)
+                      Image.asset(AppImages.aplphabet)
                     ],
                   ),
                   Text(

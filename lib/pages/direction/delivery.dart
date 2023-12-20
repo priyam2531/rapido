@@ -12,17 +12,17 @@ class DeliveryPage extends StatefulWidget {
 }
 
 class _DeliveryPageState extends State<DeliveryPage> {
-  bool WaySheet = true;
-  bool NextSheet = true;
-  bool ClickSheet = true;
-  bool NearSheet = true;
+  bool waySheet = true;
+  bool nextSheet = true;
+  bool clickSheet = true;
+  bool nearSheet = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffFFFFFF),
         leading: AppIcon.backarrow,
-        title: Center(
+        title: const Center(
           child: Text(
             "Deliver",
             style: TextStyle(
@@ -38,11 +38,11 @@ class _DeliveryPageState extends State<DeliveryPage> {
           children: [
             Card(
               elevation: 10,
-              color: Color(0xffFFFFFF),
+              color: const Color(0xffFFFFFF),
               child: Container(
                 height: 470,
                 width: 300,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xffFFFFFF),
                   borderRadius: BorderRadius.all(
                     Radius.circular(50),
@@ -55,8 +55,8 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       Row(
                         children: [
                           Image.asset("assets/img_6.png"),
-                          SizedBox(width: 10),
-                          Column(
+                          const SizedBox(width: 10),
+                           const Column(
                             children: [
                               Text(
                                 "Your ride has been",
@@ -76,14 +76,14 @@ class _DeliveryPageState extends State<DeliveryPage> {
                           height: 50,
                           width: 270,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                             border: Border.all(
-                              color: Color(0xFFF3A81C),
+                              color: const Color(0xFFF3A81C),
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Text(
@@ -110,15 +110,15 @@ class _DeliveryPageState extends State<DeliveryPage> {
                           height: 90,
                           width: 270,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                             border: Border.all(
-                              color: Color(0xFFF3A81C),
+                              color: const Color(0xFFF3A81C),
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10),
+                          child: const Padding(
+                            padding: EdgeInsets.only(top: 10),
                             child: Column(
                               children: [
                                 Row(
@@ -182,15 +182,15 @@ class _DeliveryPageState extends State<DeliveryPage> {
                           height: 120,
                           width: 270,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                             border: Border.all(
-                              color: Color(0xFFF3A81C),
+                              color: const Color(0xFFF3A81C),
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(12.0),
                             child: Column(
                               children: [
                                 Row(
@@ -203,7 +203,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 10),
+                                  padding: EdgeInsets.only(top: 10),
                                   child: Row(
                                     children: [
                                       Text(
@@ -219,7 +219,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 20),
+                                  padding: EdgeInsets.only(top: 20),
                                   child: Row(
                                     children: [
                                       Text(
@@ -250,7 +250,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
               padding: const EdgeInsets.only(top: 120),
               child: CustomButton(
                   onTap: () {
-                    if (WaySheet) {
+                    if (waySheet) {
                       waysheet(context);
                     } else {
                       // Add logic for other conditions or actions
@@ -278,17 +278,17 @@ class _DeliveryPageState extends State<DeliveryPage> {
           padding: const EdgeInsets.all(50),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text("Sorry, your ride has been cancelled by"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("the driver."),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("What do you want to do?"),
                 ],
@@ -300,7 +300,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -317,14 +317,14 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
-                        if (ClickSheet) {
+                        if (clickSheet) {
                           clicksheet(context);
                         } else {
                           // Add logic for other conditions or actions
                         }
                       },
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -356,12 +356,12 @@ class _DeliveryPageState extends State<DeliveryPage> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text("Are you sure you want to cancel this"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("row?"),
                 ],
@@ -371,7 +371,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                   TextButton(
                     onPressed: () {},
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.amberAccent,
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
@@ -388,14 +388,14 @@ class _DeliveryPageState extends State<DeliveryPage> {
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
-                      if (NextSheet) {
+                      if (nextSheet) {
                         nextsheet(context);
                       } else {
                         // Add logic for other conditions or actions
                       }
                     },
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.amberAccent,
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
@@ -426,22 +426,22 @@ class _DeliveryPageState extends State<DeliveryPage> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text("Sorry, this ride has been cancelled by the"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("driver because you did not appear at the"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("designated location. A penalty will be"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("charged in your next trip."),
                 ],
@@ -453,7 +453,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -470,14 +470,14 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     TextButton(
                       onPressed: () {
                         Navigator.pop(context);
-                        if (NearSheet) {
+                        if (nearSheet) {
                           nearsheet(context);
                         } else {
                           // Add logic for other conditions or actions
                         }
                       },
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -509,12 +509,12 @@ class _DeliveryPageState extends State<DeliveryPage> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text("Are you sure you want to cancel this"),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text("ride?"),
                 ],
@@ -526,7 +526,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     TextButton(
                       onPressed: () {},
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -549,14 +549,14 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             builder: (context) => const LastScreen(),
                           ),
                         );
-                        if (NearSheet) {
+                        if (nearSheet) {
                           nearsheet(context);
                         } else {
                           // Add logic for other conditions or actions
                         }
                       },
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.amberAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),

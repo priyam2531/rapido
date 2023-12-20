@@ -7,14 +7,14 @@ import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
 import 'package:rapido/constant/icon_page.dart';
 
-class signpagetwo extends StatefulWidget {
-  const signpagetwo({super.key});
+class SignpageTwo extends StatefulWidget {
+  const SignpageTwo({super.key});
 
   @override
-  State<signpagetwo> createState() => _signpagetwoState();
+  State<SignpageTwo> createState() => _SignpageTwoState();
 }
 
-class _signpagetwoState extends State<signpagetwo> {
+class _SignpageTwoState extends State<SignpageTwo> {
 
   Country? country;
   String? contryNumber;
@@ -29,9 +29,9 @@ class _signpagetwoState extends State<signpagetwo> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         onPressed: () {
-          Navigator.push(context,MaterialPageRoute(builder: (context) => Signpagethree()));
+          Navigator.push(context,MaterialPageRoute(builder: (context) => const Signpagethree()));
         },
-        child: AppIcon.Frontarrow,
+        child: AppIcon.frontarrow1,
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 80, left: 20),
@@ -53,7 +53,7 @@ class _signpagetwoState extends State<signpagetwo> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(StringConfig.Entermobileno,
+                  child: Text(StringConfig.entermobileno,
                       style: TextStyle(
                           fontSize: AppFont.fontSize25,
                           fontWeight: FontWeight.bold)),
@@ -61,8 +61,8 @@ class _signpagetwoState extends State<signpagetwo> {
                 AppIcon.frontarrow,
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Divider(
                 thickness: 3,
                 color: Colors.amber,
@@ -91,7 +91,7 @@ class _signpagetwoState extends State<signpagetwo> {
                             print(contryNumber);
                           },
                           countryListTheme: CountryListThemeData(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(40.0),
                               topRight: Radius.circular(40.0),
                             ),
@@ -141,7 +141,7 @@ class _signpagetwoState extends State<signpagetwo> {
                           maxLength: 10,
                           controller: number,
                           keyboardType: TextInputType.phone,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                               border: InputBorder.none, hintText: "Phone Number"),
                         )),
                   ],

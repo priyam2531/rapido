@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rapido/config/string_config.dart';
 import 'package:rapido/constant/app_images.dart';
-import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
-import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/widget/custom_button.dart';
 
 class DirectionPage extends StatefulWidget {
@@ -16,10 +14,10 @@ class DirectionPage extends StatefulWidget {
 class _DirectionPageState extends State<DirectionPage> {
   bool sheet = true;
   String _selectedTime = "";
-  bool OpenBottomSheet = true;
-  bool Newsheet = true;
-  bool Nextsheet = true;
-  bool Confirmpage = true;
+  bool openBottomSheet = true;
+  bool newsheet = true;
+  bool nextsheet = true;
+  bool confirmPage = true;
 
 
   void _handleButtonPress(BuildContext context) {
@@ -35,7 +33,7 @@ class _DirectionPageState extends State<DirectionPage> {
             padding: const EdgeInsets.all(18.0),
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
                     Text(
                       StringConfig.location,
@@ -48,14 +46,14 @@ class _DirectionPageState extends State<DirectionPage> {
                   child: Container(
                     height: 30,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xffFFFFFF),
                       boxShadow: CupertinoContextMenu.kEndBoxShadow,
                       borderRadius: BorderRadius.all(
                         Radius.circular(30),
                       ),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         hintText: StringConfig.search,
                         prefixIcon: Icon(
@@ -72,11 +70,11 @@ class _DirectionPageState extends State<DirectionPage> {
                     children: [
                       Image.asset(
                         AppImages.loc,
-                        color: Color(0xFFFFECB3),
+                        color: const Color(0xFFFFECB3),
                         height: 20,
                         width: 20,
                       ),
-                      Text(StringConfig.text),
+                      const Text(StringConfig.text),
                     ],
                   ),
                 ),
@@ -86,11 +84,11 @@ class _DirectionPageState extends State<DirectionPage> {
                     children: [
                       Image.asset(
                         AppImages.loc,
-                        color: Color(0xFFFFECB3),
+                        color: const Color(0xFFFFECB3),
                         height: 20,
                         width: 20,
                       ),
-                      Text(StringConfig.set),
+                      const Text(StringConfig.set),
                     ],
                   ),
                 ),
@@ -103,9 +101,9 @@ class _DirectionPageState extends State<DirectionPage> {
                         width: 324,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color(0xFFFFECB3),
+                            color: const Color(0xFFFFECB3),
                           ),
-                          borderRadius: BorderRadius.all(
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(30),
                           ),
                         ),
@@ -115,17 +113,17 @@ class _DirectionPageState extends State<DirectionPage> {
                             Text(StringConfig.time),
                             Text(
                               StringConfig.dmy,
-                              style: TextStyle(fontSize: 9),
+                              style: const TextStyle(fontSize: 9),
                             ),
-                            Text(StringConfig.clock),
+                            const Text(StringConfig.clock),
                           ],
                         ),
                       ),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                const Padding(
+                  padding: EdgeInsets.only(top: 20),
                   child: Row(
                     children: [
                       Text(
@@ -140,14 +138,14 @@ class _DirectionPageState extends State<DirectionPage> {
                   child: Container(
                     height: 30,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xffFFFFFF),
                       boxShadow: CupertinoContextMenu.kEndBoxShadow,
                       borderRadius: BorderRadius.all(
                         Radius.circular(30),
                       ),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         hintText: StringConfig.search,
                         prefixIcon: Icon(
@@ -163,9 +161,9 @@ class _DirectionPageState extends State<DirectionPage> {
                     AppImages.loc,
                     height: 20,
                     width: 20,
-                    color: Color(0xFFFFECB3),
+                    color: const Color(0xFFFFECB3),
                   ),
-                  title: Text(
+                  title: const Text(
                     StringConfig.set,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -200,7 +198,7 @@ class _DirectionPageState extends State<DirectionPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
-        backgroundColor: Color(0xffFAF8F8FF),
+        backgroundColor:  Color(0xffFAF8F8FF),
         leading: Icon(
           Icons.menu,
           color: Color(0xff000000),
@@ -457,7 +455,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 child: CustomButton(
                     onTap: () {
                       Navigator.pop(context);
-                      if (OpenBottomSheet) {
+                      if (openBottomSheet) {
                         _openBottomSheet(context);
                       } else {
                         // Add logic for other conditions or actions
@@ -503,7 +501,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 child: CustomButton(
                     onTap: () {
                       Navigator.pop(context);
-                      if (Newsheet) {
+                      if (newsheet) {
                         NewSheet(context);
                       } else {
                         // Add logic for other conditions or actions
@@ -628,7 +626,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 child: CustomButton(
                     onTap: () {
                       Navigator.pop(context);
-                      if (Nextsheet) {
+                      if (nextsheet) {
                         NewSheet(context);
                       } else {
                         // Add logic for other conditions or actions
@@ -756,7 +754,7 @@ class _DirectionPageState extends State<DirectionPage> {
                 child: CustomButton(
                     onTap: () {
                       Navigator.pop(context);
-                      if (Confirmpage) {
+                      if (confirmPage) {
                         confirmpage(context);
                       } else {
                         // Add logic for other conditions or actions

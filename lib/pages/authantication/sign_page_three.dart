@@ -24,9 +24,9 @@ class _SignpagethreeState extends State<Signpagethree> {
         elevation: 0,
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => Signpagethree()));
+              MaterialPageRoute(builder: (context) => const Signpagethree()));
         },
-        child: AppIcon.Frontarrow,
+        child: AppIcon.frontarrow1,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -50,7 +50,7 @@ class _SignpagethreeState extends State<Signpagethree> {
                 children: [
                   RichText(
                       text: TextSpan(
-                          text: StringConfig.Enterotp,
+                          text: StringConfig.enterotp,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: AppColor.black,
@@ -67,7 +67,7 @@ class _SignpagethreeState extends State<Signpagethree> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 StringConfig.viasms,
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppColor.grey2,
                 ),
               ),
@@ -89,11 +89,11 @@ class _SignpagethreeState extends State<Signpagethree> {
                 print("Completed: " + pin);
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             InkWell(
-              child: Text(StringConfig.Resendcode,
+              child: Text(StringConfig.resendcode,
                   style: TextStyle(
                       color: AppColor.black,
                       fontSize: AppFont.fontSize20,
@@ -111,29 +111,29 @@ class _SignpagethreeState extends State<Signpagethree> {
                 child: RichText(
                     text: TextSpan(
                         text: StringConfig.bycontinuing,
-                        style: TextStyle(color: AppColor.black),
+                        style: const TextStyle(color: AppColor.black),
                         children: [
                       TextSpan(
                           text: StringConfig.tearms,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: AppColor.yellow,
                           ),
                           children: [
                             TextSpan(
                                 text: StringConfig.and,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: AppColor.black,
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: StringConfig.Privacpolicy,
-                                      style: TextStyle(
+                                      text: StringConfig.privacypolicy,
+                                      style: const TextStyle(
                                         color: AppColor.yellow,
                                       ),
                                       children: [
                                         TextSpan(
                                             text: StringConfig.ofRapido,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: AppColor.black,
                                             )),
                                       ]),

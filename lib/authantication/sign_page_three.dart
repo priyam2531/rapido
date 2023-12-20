@@ -26,7 +26,7 @@ class _SignpagethreeState extends State<Signpagethree> {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => Signpagethree()));
         },
-        child: AppIcon.Frontarrow,
+        child: AppIcon.frontarrow1,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -50,7 +50,7 @@ class _SignpagethreeState extends State<Signpagethree> {
                 children: [
                   RichText(
                       text: TextSpan(
-                          text: StringConfig.Enterotp,
+                          text: StringConfig.enterotp,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: AppColor.black,
@@ -93,7 +93,7 @@ class _SignpagethreeState extends State<Signpagethree> {
               height: 25,
             ),
             InkWell(
-              child: Text(StringConfig.Resendcode,
+              child: Text(StringConfig.resendcode,
                   style: TextStyle(
                       color: AppColor.black,
                       fontSize: AppFont.fontSize20,
@@ -126,7 +126,7 @@ class _SignpagethreeState extends State<Signpagethree> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: StringConfig.Privacpolicy,
+                                      text: StringConfig.privacypolicy,
                                       style: TextStyle(
                                         color: AppColor.yellow,
                                       ),

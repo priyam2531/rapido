@@ -15,7 +15,7 @@ class _IntroPageState extends State<IntroPage> {
   @override
   void initState() {
     Timer(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(

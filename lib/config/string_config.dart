@@ -86,7 +86,7 @@
   static const String text= "Current Location";
   static String captain="Captain";
   static  String dinesh = "Dinesh";
-  static String Resendcode="Resend code (0:30)";
+  static String resendcode="Resend code (0:30)";
   static const String set="Set on a map";
   static const String timer = "Time";
   static const String dte = "Tuseday 22nd May";
@@ -102,14 +102,14 @@
   static String and="and";
   static  String splender = "Splendor + (RJ14QS8055)";
   static String ofRapido="of Rapido.";
-  static String Privacpolicy="Privacy Policy";
+  static String privacypolicy="Privacy Policy";
 
   static String bycontinuing="By continuing,you agree to the";
 
   static String viasms="A code has been sent to  +91 99887 76655 via SMS";
 
-  static String Entermobileno="Enter Mobile No.";
-  static String Enterotp="Enter OTP ";
+  static String entermobileno="Enter Mobile No.";
+  static String enterotp="Enter OTP ";
   static String senttotheno="sent to the no.:";
 
   static const String hi  = "Hi, Users.";

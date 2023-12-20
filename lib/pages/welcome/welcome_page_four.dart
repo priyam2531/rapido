@@ -29,7 +29,7 @@ class _WelcomePageFourState extends State<WelcomePageFour> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(AppImages.logo),
-                Image.asset(AppImages.Aaplphabet)
+                Image.asset(AppImages.aplphabet)
               ],
             ),
           ),

@@ -3,27 +3,29 @@ import 'package:rapido/constant/app_color.dart';
 import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
 
-class sginpageone extends StatefulWidget {
-  const sginpageone({super.key});
+class SignpageOne extends StatefulWidget {
+  const SignpageOne({super.key});
 
   @override
-  State<sginpageone> createState() => _sginpageoneState();
+  State<SignpageOne> createState() => _SignpageOneState();
 }
 
-class _sginpageoneState extends State<sginpageone> {
+class _SignpageOneState extends State<SignpageOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
-
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Row(mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(AppImages.logo),
             ],
           ),
 
-          Row(mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(AppImages.taxi),
             ],
@@ -92,7 +94,7 @@ class _sginpageoneState extends State<sginpageone> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                         text: "By countinuing you agree to our ",
                         style: TextStyle(
                           color: AppColor.black,
