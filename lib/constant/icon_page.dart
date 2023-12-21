@@ -16,6 +16,8 @@ class AppIcon {
   static Icon menu =   const Icon(Icons.menu);
   static Icon minus = const  Icon(CupertinoIcons.minus);
   static Icon star1 =  const Icon(Icons.star,color: AppColor.white,);
+  static Icon heart =  const Icon(CupertinoIcons.heart_fill,color: AppColor.white,);
+  static Icon clender =  const Icon(CupertinoIcons.calendar_today,color: AppColor.white,);
   static Icon frontarrow = const  Icon(Icons.arrow_forward_ios_sharp,size: 15,color: AppColor.grey,);
   static Icon star = const  Icon(Icons.star,color: AppColor.yellow,);
   static Icon star2 = const  Icon(Icons.star_border);
