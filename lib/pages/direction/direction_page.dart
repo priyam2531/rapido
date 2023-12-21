@@ -564,7 +564,7 @@ class _DirectionPageState extends State<DirectionPage> {
                               "09:30", style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
                             Icon(
-                                Icons.circle_rounded, color: Colors.amberAccent,
+                                Icons.circle_rounded,   color: Color(0xFFFFECB3),
                                 size: 10),
                             SizedBox(width: 10),
                             Text("Sector 8,Jaipur"),
@@ -576,7 +576,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "xx:xx", style: TextStyle(color: Colors.grey),),
+                              "xx:xx", style: TextStyle(color: Color(0xff616A76)),),
                             SizedBox(width: 10),
                             Icon(Icons.arrow_downward_rounded, size: 10),
                             SizedBox(width: 10),
@@ -603,7 +603,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -619,7 +619,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 70),
@@ -689,7 +689,7 @@ class _DirectionPageState extends State<DirectionPage> {
                               "09:30", style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
                             Icon(
-                                Icons.circle_rounded, color: Colors.amberAccent,
+                                Icons.circle_rounded, color: Color(0xFFF3A81C),
                                 size: 10),
                             SizedBox(width: 10),
                             Text("Sector 8,Jaipur"),
@@ -701,7 +701,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "xx:xx", style: TextStyle(color: Colors.grey),),
+                              "xx:xx", style: TextStyle(color: Color(0xff616A76),),),
                             SizedBox(width: 10),
                             Icon(Icons.arrow_downward_rounded, size: 10),
                             SizedBox(width: 10),
@@ -728,7 +728,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -741,13 +741,13 @@ class _DirectionPageState extends State<DirectionPage> {
                       style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(width: 130),
                     Text(
-                      "-Rs 30", style: TextStyle(color: Colors.amberAccent),),
+                      "-Rs 30", style: TextStyle(color: Color(0xFFF3A81C),),),
                   ],
                 ),
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 70),

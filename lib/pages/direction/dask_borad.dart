@@ -46,7 +46,7 @@ class _DaskBoradState extends State<DaskBorad> {
               notchBottomBarController: _controller,
               color: AppColor.yellow,
               showLabel: false,
-              notchColor: Colors.black87,
+              notchColor: Color(0xff050505),
               removeMargins: true,
               bottomBarWidth: 500,
               durationInMilliSeconds: 300,
@@ -54,22 +54,22 @@ class _DaskBoradState extends State<DaskBorad> {
                 BottomBarItem(
                   inActiveItem: Icon(
                     Icons.watch_later_outlined,
-                    color: Colors.blueGrey,
+                    color: Color(0xffD5DDE0),
                   ),
                   activeItem: Icon(
                     Icons.watch_later_outlined,
-                    color: Colors.blueAccent,
+                    color: Color(0xffb3e5fc),
                   ),
                   itemLabel: 'Page 1',
                 ),
                 BottomBarItem(
                   inActiveItem: Icon(
                     Icons.star,
-                    color: Colors.blueGrey,
+                    color: Color(0xffD5DDE0),
                   ),
                   activeItem: Icon(
                     Icons.star,
-                    color: Colors.blueAccent,
+                    color: Color(0xffb3e5fc),
                   ),
                   itemLabel: 'Page 2',
                 ),
@@ -78,7 +78,7 @@ class _DaskBoradState extends State<DaskBorad> {
                   inActiveItem: Icon(Icons.search),
                   activeItem: Icon(
                     Icons.search,
-                    color: Colors.black,
+                    color: Color(0xff050505),
                   ),
                   itemLabel: 'Page 3',
                 ),
@@ -100,7 +100,7 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.green, child: const Center(child: Text('Page 2')));
+        color: Color(0xff4a9a05), child: const Center(child: Text('Page 2')));
   }
 }
 
@@ -110,7 +110,7 @@ class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.red, child: const Center(child: Text('Page 3')));
+        color: Color(0xffda0831), child: const Center(child: Text('Page 3')));
   }
 }
 
@@ -120,7 +120,7 @@ class Page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.blue, child: const Center(child: Text('Page 4')));
+        color: Color(0xffb3e5fc), child: const Center(child: Text('Page 4')));
   }
 }
 
@@ -130,7 +130,7 @@ class Page5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.lightGreenAccent,
+        color: Color(0xff4a9a05),
         child: const Center(child: Text('Page 5')));
   }
 }

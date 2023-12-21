@@ -21,7 +21,10 @@ class _LastScreenState extends State<LastScreen> {
                 Text(
                   "Terns & Condition",
                   style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
+                      color: Color(0xff050505
+
+
+                      ), fontWeight: FontWeight.bold),
                 ),
               ],
             ),

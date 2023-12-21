@@ -15,9 +15,9 @@ class _PromoCodeState extends State<PromoCode> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffFFFFFF),
         leading: AppIcon.backarrow,
         title: Center(
           child: Text(
