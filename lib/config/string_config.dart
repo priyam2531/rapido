@@ -123,8 +123,6 @@
   static const String x="xx:xx";
   static const String adrs2="IT Park Mansarovar,Jaipur";
   static const String ride="Ride";
-
-  }
   static const String option = "Choose an option";
   static const String acciedent = "I was involved  in an accident";
   static const String iteam = "I left an item";
@@ -139,4 +137,6 @@
   static const String accidentmore = "If you’ve been involved in an accident, we’re extremely sorry for that and would assist you in every way possible. Submit a ticket telling us some more details and our assistance team will get right back to you.";
   static const String iteammore =
       "If you've lost an item you will need to send us an message immediately, please remembering to provide us with as many details as possible about your lost item and the ride you took. If we find it we’ll connect you with the driver directly to get it back.";
-}
+
+  }
+
