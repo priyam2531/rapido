@@ -6,8 +6,7 @@ import 'package:rapido/constant/font_size.dart';
 import 'package:rapido/constant/margin_page.dart';
 import 'package:rapido/pages/profile/user_page.dart';
 import 'package:rapido/pages/ride%20history/captain_detail.dart';
-import 'package:rapido/pages/ride%20history/ride_history.dart';
-import 'package:rapido/widget/custom_button.dart';
+import 'package:rapido/pages/support/iteam_page.dart';
 
 import '../../constant/icon_page.dart';
 
@@ -19,6 +18,8 @@ class RideDetail extends StatefulWidget {
 }
 
 class _RideDetailState extends State<RideDetail> {
+  bool isSelected = false;
+  bool isSheet = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +27,13 @@ class _RideDetailState extends State<RideDetail> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return UserPage();
+                },
+              ));
+            },
             child: Card(
               elevation: 3,
               shadowColor: AppColor.black,
@@ -37,8 +45,12 @@ class _RideDetailState extends State<RideDetail> {
                 child: AppIcon.backarrow,
               ),
             ),
-          )
-      ,title: Center(child: Text(StringConfig.ridedetail,style: TextStyle(color: AppColor.black),))),
+          ),
+          title: Center(
+              child: Text(
+            StringConfig.ridedetail,
+            style: TextStyle(color: AppColor.black),
+          ))),
       body: ListView(
         children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -179,8 +191,7 @@ class _RideDetailState extends State<RideDetail> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: AppColor.white),
-                        child:
-                        Row(
+                        child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
@@ -210,7 +221,7 @@ class _RideDetailState extends State<RideDetail> {
                                   ),
                                 ],
                               ),
-                              SizedBox(width: 210),
+                              SizedBox(width: 70),
                               InkWell(
                                   onTap: () {
                                     Navigator.push(context, MaterialPageRoute(
@@ -238,7 +249,10 @@ class _RideDetailState extends State<RideDetail> {
                       child: ListTile(
                         leading: Image(image: AssetImage(AppImages.chair)),
                         title: Text(StringConfig.code2),
-                          trailing: Text(StringConfig.rs,style: TextStyle(fontWeight: FontWeight.bold,color: AppColor.grey)),
+                        trailing: Text(StringConfig.rs,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: AppColor.grey)),
                       ),
                     ),
                   ),
@@ -248,11 +262,97 @@ class _RideDetailState extends State<RideDetail> {
                           fontSize: (padding20),
                           color: AppColor.black,
                           letterSpacing: 1)),
-                  CustomButton(title: StringConfig.issue,onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return UserPage();
-                    },));
-                  },)
+                  Center(
+                    child: MaterialButton(
+                      color: AppColor.yellow,
+                      child: Text(StringConfig.issue),
+                      onPressed: () {
+                        showModalBottomSheet(
+                          elevation: 10,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          context: context,
+                          builder: (context) {
+                            return StatefulBuilder(
+                              builder: (context, setState) {
+                                return  Padding(
+                                  padding:  EdgeInsets.only(left: AppMargin.marginSize9),
+                                  child: Column(mainAxisSize: MainAxisSize.min,
+                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Icon(
+                                        Icons.horizontal_rule_rounded,
+                                        size: 40,
+                                        color: AppColor.grey2,
+                                      )),
+                                      Text(StringConfig.option,
+                                          style: TextStyle(
+                                              color: AppColor.black,
+                                              fontSize:
+                                                  AppFont.fontSize18,
+                                              fontWeight:
+                                                  FontWeight.bold)),
+                                      ListTile(
+                                          title: Text(
+                                        StringConfig.acciedent,
+                                        style: TextStyle(
+                                            color: AppColor.grey),
+                                      )),
+                                      Divider(
+                                          color: AppColor.grey2,
+                                          thickness: 2),
+                                      ListTile(
+                                          onTap: () {
+                                            Navigator.push(context,
+                                                MaterialPageRoute(
+                                              builder: (context) {
+                                                return IteamPage();
+                                              },
+                                            ));
+                                          },
+                                          title: Text(
+                                            StringConfig.iteam,
+                                            style: TextStyle(
+                                                color: AppColor.grey),
+                                          )),
+                                      Divider(
+                                          color: AppColor.grey2,
+                                          thickness: 2),
+                                      ListTile(
+                                          title: Text(
+                                        StringConfig.refund,
+                                        style: TextStyle(
+                                            color: AppColor.grey),
+                                      )),
+                                      Divider(
+                                          color: AppColor.grey2,
+                                          thickness: 2),
+                                      ListTile(
+                                          title: Text(
+                                        StringConfig.issue2,
+                                        style: TextStyle(
+                                            color: AppColor.grey),
+                                      )),
+                                      Divider(
+                                          color: AppColor.grey2,
+                                          thickness: 2),
+                                    ],
+                                  ),
+                                );
+
+                              },
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  )
+                  // CustomButton(title: StringConfig.issue,onTap: () {
+                  //   Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  //     return UserPage();
+                  //   },));
+                  // },)
                 ],
               ),
             )

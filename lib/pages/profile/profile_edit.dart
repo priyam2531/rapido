@@ -5,6 +5,7 @@ import 'package:rapido/constant/app_images.dart';
 import 'package:rapido/constant/font_size.dart';
 import 'package:rapido/constant/icon_page.dart';
 import 'package:rapido/constant/margin_page.dart';
+import 'package:rapido/pages/profile/user_page.dart';
 
 class ProfileEdit extends StatefulWidget {
   const ProfileEdit({Key? key}) : super(key: key);
@@ -18,7 +19,11 @@ class _ProfileEditState extends State<ProfileEdit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor:Colors.transparent,elevation: 0,
-          leading: InkWell(
+          leading: InkWell(onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return UserPage();
+            },));
+          },
             child: Card(elevation: 3,shadowColor: AppColor.black,shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)),
               child: Container(
                 decoration:
