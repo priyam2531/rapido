@@ -111,12 +111,16 @@
   static String entermobileno="Enter Mobile No.";
   static String enterotp="Enter OTP ";
   static String senttotheno="sent to the no.:";
-
+  static String riidle="RIDE DETAILS";
   static const String hi  = "Hi, Users.";
   static const String rate= "4.8";
   static const String recipt= "Show receipt";
   static const String issue= "Raise issue";
-
+  static const String venue="Jaipur";
   static const String code2 = "****8295";
+  static const String adrs="Sector 8,Jaipur";
+  static const String x="xx:xx";
+  static const String adrs2="IT Park Mansarovar,Jaipur";
+  static const String ride="Ride";
 
   }
