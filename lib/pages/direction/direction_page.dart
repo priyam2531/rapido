@@ -446,8 +446,8 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 20),
                 child: ListTile(
                   leading: Icon(Icons.location_on),
-                  title: Text("Boys Hostel No.2,Pratap Nagar"),
-                  subtitle: Text("Jaipur"),
+                  title: Text(StringConfig.place),
+                  subtitle: Text(StringConfig.venue),
                 ),
               ),
               Padding(
@@ -492,8 +492,8 @@ class _DirectionPageState extends State<DirectionPage> {
                 padding: const EdgeInsets.only(top: 20),
                 child: ListTile(
                   leading: Icon(Icons.location_on),
-                  title: Text("Boys Hostel No.2,Pratap Nagar"),
-                  subtitle: Text("Jaipur"),
+                  title: Text(StringConfig.place),
+                  subtitle: Text(StringConfig.venue),
                 ),
               ),
               Padding(
@@ -527,7 +527,7 @@ class _DirectionPageState extends State<DirectionPage> {
             children: [
               Row(
                 children: [
-                  Text("By continuing you agree to the T & C"),
+                  Text(StringConfig.viasms),
                 ],
               ),
               Padding(
@@ -550,7 +550,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "RIDE DETAILS",
+                              StringConfig.riidle,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -561,13 +561,13 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "09:30", style: TextStyle(color: Colors.grey),),
+                              StringConfig.clock, style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
                             Icon(
-                                Icons.circle_rounded, color: Colors.amberAccent,
+                                Icons.circle_rounded,   color: Color(0xFFFFECB3),
                                 size: 10),
                             SizedBox(width: 10),
-                            Text("Sector 8,Jaipur"),
+                            Text(StringConfig.adrs),
                           ],
                         ),
                       ),
@@ -576,11 +576,11 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "xx:xx", style: TextStyle(color: Colors.grey),),
+                              StringConfig.x, style: TextStyle(color: Color(0xff616A76)),),
                             SizedBox(width: 10),
                             Icon(Icons.arrow_downward_rounded, size: 10),
                             SizedBox(width: 10),
-                            Text("IT Park Mansarover,Jaipur"),
+                            Text(StringConfig.adrs2),
                           ],
                         ),
                       ),
@@ -594,7 +594,7 @@ class _DirectionPageState extends State<DirectionPage> {
                   children: [
                     Icon(Icons.electric_bike, size: 20),
                     Text(
-                      "Ride", style: TextStyle(fontWeight: FontWeight.bold),),
+                      StringConfig.ride, style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(width: 40),
                     Text("(Tuseday 22nd May)"),
                     Text("09:30 AM"),
@@ -603,7 +603,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -619,7 +619,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 70),
@@ -652,7 +652,7 @@ class _DirectionPageState extends State<DirectionPage> {
             children: [
               Row(
                 children: [
-                  Text("By continuing you agree to the T & C"),
+                  Text(StringConfig.label),
                 ],
               ),
               Padding(
@@ -675,7 +675,7 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "RIDE DETAILS",
+                              StringConfig.ridedetail,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -686,13 +686,13 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "09:30", style: TextStyle(color: Colors.grey),),
+                              StringConfig.clock, style: TextStyle(color: Colors.grey),),
                             SizedBox(width: 10),
                             Icon(
-                                Icons.circle_rounded, color: Colors.amberAccent,
+                                Icons.circle_rounded, color: Color(0xFFF3A81C),
                                 size: 10),
                             SizedBox(width: 10),
-                            Text("Sector 8,Jaipur"),
+                            Text(StringConfig.adrs),
                           ],
                         ),
                       ),
@@ -701,11 +701,11 @@ class _DirectionPageState extends State<DirectionPage> {
                         child: Row(
                           children: [
                             Text(
-                              "xx:xx", style: TextStyle(color: Colors.grey),),
+                              StringConfig.x, style: TextStyle(color: Color(0xff616A76),),),
                             SizedBox(width: 10),
                             Icon(Icons.arrow_downward_rounded, size: 10),
                             SizedBox(width: 10),
-                            Text("IT Park Mansarover,Jaipur"),
+                            Text(StringConfig.adrs2),
                           ],
                         ),
                       ),
@@ -719,7 +719,7 @@ class _DirectionPageState extends State<DirectionPage> {
                   children: [
                     Icon(Icons.electric_bike, size: 20),
                     Text(
-                      "Ride", style: TextStyle(fontWeight: FontWeight.bold),),
+                      StringConfig.ride, style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(width: 40),
                     Text("(Tuseday 22nd May)"),
                     Text("09:30 AM"),
@@ -728,7 +728,7 @@ class _DirectionPageState extends State<DirectionPage> {
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
@@ -741,13 +741,13 @@ class _DirectionPageState extends State<DirectionPage> {
                       style: TextStyle(fontWeight: FontWeight.bold),),
                     SizedBox(width: 130),
                     Text(
-                      "-Rs 30", style: TextStyle(color: Colors.amberAccent),),
+                      "-Rs 30", style: TextStyle(color: Color(0xFFF3A81C),),),
                   ],
                 ),
               ),
               Divider(
                 thickness: 1,
-                color: Colors.black,
+                color: Color(0xff050505),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 70),

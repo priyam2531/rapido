@@ -228,11 +228,11 @@ class _RideScheduleState extends State<RideSchedule> {
                                     children: [
                                       Text(
                                         "09:30",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: Color(0xffD5DDE0),),
                                       ),
                                       SizedBox(width: 10),
                                       Icon(Icons.circle,
-                                          color: Colors.amberAccent, size: 8),
+                                          color: Color(0xFFF3A81C), size: 8),
                                       SizedBox(width: 10),
                                       Text("Sector 8 Jaipur"),
                                     ],
@@ -244,7 +244,7 @@ class _RideScheduleState extends State<RideSchedule> {
                                     children: [
                                       Text(
                                         "ETA",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: Color(0xffD5DDE0),),
                                       ),
                                       SizedBox(width: 17),
                                       Icon(
@@ -305,7 +305,7 @@ class _RideScheduleState extends State<RideSchedule> {
                     Text(
                       StringConfig.pickup,
                       style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),
+                          color: Color(0xff050505), fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -565,7 +565,7 @@ class _RideScheduleState extends State<RideSchedule> {
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
                         ),
-                        border: Border.all(color: Colors.amber),
+                        border: Border.all(color: Color(0xFFF3A81C),),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,

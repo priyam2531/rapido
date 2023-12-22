@@ -16,9 +16,9 @@ class _ScreenPageState extends State<ScreenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffFFFFFF),
         leading: AppIcon.backarrow,
         title: Center(
           child: Text(
@@ -174,7 +174,7 @@ class _ScreenPageState extends State<ScreenPage> {
                 height: 110,
                 width: 290,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: Color(0xffD5DDE0),),
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
                   ),

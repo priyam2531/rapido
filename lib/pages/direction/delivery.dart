@@ -208,11 +208,11 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                     children: [
                                       Text(
                                         "09:30",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: Color(0xffD5DDE0)),
                                       ),
                                       SizedBox(width: 10),
                                       Icon(Icons.circle,
-                                          color: Colors.amberAccent, size: 8),
+                                          color: Color(0xFFF3A81C), size: 8),
                                       SizedBox(width: 10),
                                       Text("Sector 8 Jaipur"),
                                     ],
@@ -224,7 +224,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                                     children: [
                                       Text(
                                         "ETA",
-                                        style: TextStyle(color: Colors.grey),
+                                        style: TextStyle(color: Color(0xffD5DDE0),),
                                       ),
                                       SizedBox(width: 17),
                                       Icon(
@@ -301,7 +301,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       onPressed: () {},
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -310,7 +310,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'Stop Searching',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -325,7 +325,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       },
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -334,7 +334,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'Search Again',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -372,7 +372,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     onPressed: () {},
                     child: Container(
                       decoration: const BoxDecoration(
-                        color: Colors.amberAccent,
+                        color: Color(0xFFF3A81C),
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
                         ),
@@ -381,7 +381,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                           vertical: 5, horizontal: 10),
                       child: const Text(
                         'No',
-                        style: TextStyle(color: Colors.black, fontSize: 13.0),
+                        style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                       ),
                     ),
                   ),
@@ -396,7 +396,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                     },
                     child: Container(
                       decoration: const BoxDecoration(
-                        color: Colors.amberAccent,
+                        color: Color(0xFFF3A81C),
                         borderRadius: BorderRadius.all(
                           Radius.circular(15),
                         ),
@@ -405,7 +405,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                           vertical: 5, horizontal: 10),
                       child: const Text(
                         'Yes',
-                        style: TextStyle(color: Colors.black, fontSize: 13.0),
+                        style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                       ),
                     ),
                   ),
@@ -454,7 +454,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       onPressed: () {},
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -463,7 +463,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'Ok',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -478,7 +478,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       },
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -487,7 +487,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'Raise issue',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -527,7 +527,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       onPressed: () {},
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -536,7 +536,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'No',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -557,7 +557,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                       },
                       child: Container(
                         decoration: const BoxDecoration(
-                          color: Colors.amberAccent,
+                          color: Color(0xFFF3A81C),
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
                           ),
@@ -566,7 +566,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                             vertical: 5, horizontal: 10),
                         child: const Text(
                           'Yes',
-                          style: TextStyle(color: Colors.black, fontSize: 13.0),
+                          style: TextStyle(color: Color(0xff050505), fontSize: 13.0),
                         ),
                       ),
                     ),

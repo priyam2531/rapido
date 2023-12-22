@@ -11,7 +11,7 @@ class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Color(0xff80cbc4),
     );
   }
 }

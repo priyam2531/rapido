@@ -1,4 +1,5 @@
-class StringConfig {
+
+  class StringConfig {
   static String name = "User - name";
   static String number = "+91-99887 76655";
   static String history = "RIDE HISTORY";
@@ -69,61 +70,61 @@ class StringConfig {
   static String pickup = "Pickup Parsel from";
   static String from = "Pickup from";
   static String details = "Add Details";
-  static String parsel = "Deliver Parcel to";
-  static String label = "By continuing you agree to the T&C";
-  static String adrres = "Sector 8,Jaipur";
-  static String adrres2 = "Boys Hostel No.2,Pratap Nagar";
-  static String time = "Pickup (15 min)";
-  static String rs = "Rs 127";
-  static String coupen = "Apply Coupen Code";
-  static const String nameuser = "Hi, Users.";
-  static const String work = "Office";
+  static String parsel= "Deliver Parcel to";
+  static String label= "By continuing you agree to the T&C";
+  static String adrres="Sector 8,Jaipur";
+  static String adrres2="Boys Hostel No.2,Pratap Nagar";
+  static String time="Pickup (15 min)";
+  static String rs="Rs 127";
+  static String coupen="Apply Coupen Code";
+  static const String nameuser  = "Hi, Users.";
+  static const String work= "Office";
   static const String type = "Search Destination";
   static const String side = "Schedule a ride";
   static const String city = "Jaipur";
-  static const String location = "Pickup Location";
-  static const String search = "Search Location";
-  static const String text = "Current Location";
-  static String captain = "Captain";
-  static String dinesh = "Dinesh";
-  static String resendcode = "Resend code (0:30)";
-  static const String set = "Set on a map";
+  static const String location="Pickup Location";
+  static const String search="Search Location";
+  static const String text= "Current Location";
+  static String captain="Captain";
+  static  String dinesh = "Dinesh";
+  static String resendcode="Resend code (0:30)";
+  static const String set="Set on a map";
   static const String timer = "Time";
   static const String dte = "Tuseday 22nd May";
-  static const String clock = "09:30 AM";
-  static const String sdo = "Select drop off";
+  static const String clock= "09:30 AM";
+  static const String sdo= "Select drop off";
   static const String button = "Continue";
-  static const String dl = "Destination Location";
-  static String captaindetail = "Captain Details";
-  static String hero = "Hero Splendor + ";
-  static String ridedetail = "Ride Detail";
+  static const String dl="Destination Location";
+  static String captaindetail="Captain Details";
+  static  String hero = "Hero Splendor + ";
+  static String ridedetail ="Ride Detail";
 
-  static String tearms = "Tearms";
-  static String and = "and";
-  static String splender = "Splendor + (RJ14QS8055)";
-  static String ofRapido = "of Rapido.";
-  static String privacypolicy = "Privacy Policy";
+  static String tearms="Tearms";
+  static String and="and";
+  static  String splender = "Splendor + (RJ14QS8055)";
+  static String ofRapido="of Rapido.";
+  static String privacypolicy="Privacy Policy";
 
-  static String bycontinuing = "By continuing,you agree to the";
+  static String bycontinuing="By continuing,you agree to the";
 
-  static String viasms = "A code has been sent to  +91 99887 76655 via SMS";
+  static String viasms="A code has been sent to  +91 99887 76655 via SMS";
 
-  static String entermobileno = "Enter Mobile No.";
-  static String enterotp = "Enter OTP ";
-  static String member = "Member since";
-  static String plateno = "Plate number";
-  static String plate = "RJ14 QS 8055";
-  static String memberdte = "16.06.2018";
-  static String senttotheno = "sent to the no.:";
-
-  static const String hi = "Hi, Users.";
-  static const String rate = "4.8";
-  static const String heartbit = "126";
-  static const String year = "2 years";
-  static const String recipt = "Show receipt";
-  static const String issue = "Raise issue";
-
+  static String entermobileno="Enter Mobile No.";
+  static String enterotp="Enter OTP ";
+  static String senttotheno="sent to the no.:";
+  static String riidle="RIDE DETAILS";
+  static const String hi  = "Hi, Users.";
+  static const String rate= "4.8";
+  static const String recipt= "Show receipt";
+  static const String issue= "Raise issue";
+  static const String venue="Jaipur";
   static const String code2 = "****8295";
+  static const String adrs="Sector 8,Jaipur";
+  static const String x="xx:xx";
+  static const String adrs2="IT Park Mansarovar,Jaipur";
+  static const String ride="Ride";
+
+  }
   static const String option = "Choose an option";
   static const String acciedent = "I was involved  in an accident";
   static const String iteam = "I left an item";
