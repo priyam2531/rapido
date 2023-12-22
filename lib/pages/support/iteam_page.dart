@@ -43,7 +43,8 @@ class _IteamPageState extends State<IteamPage> {
           ),
         ),
       ),
-      body: Padding(
+      body:
+      Padding(
         padding:  EdgeInsets.all(padding20),
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Column(crossAxisAlignment: CrossAxisAlignment.start,

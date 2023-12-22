@@ -4,6 +4,7 @@ class StringConfig {
   static String history = "RIDE HISTORY";
   static String payment = "PAYMENT";
   static String home = "Home";
+  static String datenm = "Date";
   static String gym = "Gym";
   static String ridehistory = "Ride History";
   static String date = "8 APR 2022, 11:38";
@@ -130,7 +131,11 @@ class StringConfig {
   static const String issue2 = "I had a different issue";
   static const String more = "Tell us more";
   static const String us = "TELL US";
+  static const String placenm = "Place";
+  static const String happen = "HOW DID IT HAPPEN?";
+  static const String hurt = "HAVE YOU BEEN HURT?";
   static const String submit = "Submit";
+  static const String accidentmore = "If you’ve been involved in an accident, we’re extremely sorry for that and would assist you in every way possible. Submit a ticket telling us some more details and our assistance team will get right back to you.";
   static const String iteammore =
       "If you've lost an item you will need to send us an message immediately, please remembering to provide us with as many details as possible about your lost item and the ride you took. If we find it we’ll connect you with the driver directly to get it back.";
 }
